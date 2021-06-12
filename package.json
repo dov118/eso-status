@@ -1,0 +1,29 @@
+{
+  "name": "@dov118/eso-status",
+  "version": "1.0.0",
+  "description": "Library used to get servers status of The elders scrolls Online game",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dov118/eso-status.git"
+  },
+  "author": "@dov118 <contact@dov118.dev> (https://dov118.dev)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dov118/eso-status/issues"
+  },
+  "homepage": "https://github.com/dov118/eso-status#readme",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@types/request": "^2.48.5",
+    "request": "^2.88.2"
+  }
+}
