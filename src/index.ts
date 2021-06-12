@@ -93,39 +93,6 @@ export class EsoStatus {
 
             return item;
         });
-
-
-        /*
-        return rawContentItemList.map(
-            (item: InformationBlock): InformationBlock => {
-                // @ts-ignore
-                item.information_lines = [];
-                const regex: RegExp = /<p>(.*?)<\/p>/gs;
-                let m;
-                let index: number = 0;
-
-                // tslint:disable-next-line:no-conditional-assignment
-                while ((m = regex.exec(item.raw)) !== null) {
-                    m.forEach((match: string): void => {
-                        if (!match.includes('<p>')) {
-                            if (index === 0) {
-                                item.date_line = {
-                                    raw: match,
-                                };
-                            } else {
-                                item.information_lines?.push({
-                                    raw: match,
-                                });
-                            }
-                        }
-                    });
-                    index++;
-                }
-                return item;
-            },
-        );
-
-         */
     }
 
     /**

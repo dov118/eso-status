@@ -1,15 +1,23 @@
-## [1.1.11](https://github.com/dov118/eso-status/compare/1.1.10...1.1.11) (03/05/2021)
+## [1.1.12](https://github.com/dov118/eso-status/compare/1.1.11...1.1.12) (2021-05-05)
+
+### Updates
+* Update **ts-jest** from **26.5.5** to **26.5.6** ([7af6a79](https://github.com/dov118/eso-status/commit/7af6a791b1bf0ad4fc9febf663599287c58f3633))
+
+### Code Refactoring
+* Remove unused comments ([68c5e28](https://github.com/dov118/eso-status/commit/68c5e283a810a14a87d72d4d5b739d7a0a98a5d4))
+
+## [1.1.11](https://github.com/dov118/eso-status/compare/1.1.10...1.1.11) (2021-05-03)
 
 ### Code Refactoring
 * Update **README.md** ([b34dc49](https://github.com/dov118/eso-status/commit/b34dc4994fa1922afce43527d44815fb21774352))
 * Replace polynomial regular expression used on uncontrolled data ([ba88f25](https://github.com/dov118/eso-status/commit/ba88f258ee694d2d75eca2dfa3ffd59094819e0d))
 
-## [1.1.10](https://github.com/dov118/eso-status/compare/1.1.9...1.1.10) (01/05/2021)
+## [1.1.10](https://github.com/dov118/eso-status/compare/1.1.9...1.1.10) (2021-05-01)
 
 ### Features
 * Add **We are currently investigating issues some players are having on the North American PC/Mac megaserver.** status ([b74865e](https://github.com/dov118/eso-status/commit/b74865e6df8400a7259dc5f9326589dd02fc03e7))
 
-## [1.1.9](https://github.com/dov118/eso-status/compare/1.1.8...1.1.9) (27/04/2021)
+## [1.1.9](https://github.com/dov118/eso-status/compare/1.1.8...1.1.9) (2021-04-27)
 
 ### Code Refactoring
 * Update **LICENCE.md** ([d3aea48](https://github.com/dov118/eso-status/commit/d3aea485501ff2bc56acf0d00b6e61d2ec63efad))
@@ -18,27 +26,27 @@
 ### Updates
 * Update **@types/jest** from **26.0.22** to **26.0.23** ([5909d6a](https://github.com/dov118/eso-status/commit/5909d6a07eede6282368a7954dda414e2ba4e9b8))
 
-## 1.1.8 (15/04/2021)
+## 1.1.8 (2021-04-15)
 
 ### Updates
 * Update **ts-jest** from **26.5.4** to **26.5.5** ([4740055](https://github.com/dov118/eso-status/commit/4740055b0648ee223d8e88fbca06e8e61d2f0d4f))
 
-## 1.1.7 (08/04/2021)
+## 1.1.7 (2021-04-08)
 
 ### Updates
 * Update **typescript** from **4.2.3** to **4.2.4** ([55f87ef](https://github.com/dov118/eso-status/commit/55f87ef4a9887b0b5f783f7a91dd2417158e7093))
 
-## 1.1.6 (02/04/2021)
+## 1.1.6 (2021-04-02)
 
 ### Updates
 * Update **ts-jest** from **26.5.2** to **26.5.4** ([4d7219a](https://github.com/dov118/eso-status/commit/4d7219af3e4ea41d437679fe2cff6517815a1df9))
 
-## 1.1.5 (01/04/2021)
+## 1.1.5 (2021-04-01)
 
 ### Features
 * Add **The issues related to logging in to the megaservers have been resolved at this time.** status ([a349db0](https://github.com/dov118/eso-status/commit/a349db015943cd22bd6049b009a250ae4f57a896))
 
-## 1.1.4 (31/03/2021)
+## 1.1.4 (2021-03-31)
 
 ### Features
 * Add CHANGELOG.md file ([4e06fac](https://github.com/dov118/eso-status/commit/4e06facb7077670d28ece2bff654351e81d7a6f1))
