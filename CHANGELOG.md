@@ -1,3 +1,8 @@
+## [1.1.10](https://github.com/dov118/eso-status/compare/1.1.9...1.1.10) (01/05/2021)
+
+### Features
+* Add **We are currently investigating issues some players are having on the North American PC/Mac megaserver.** status ([b74865e](https://github.com/dov118/eso-status/commit/b74865e6df8400a7259dc5f9326589dd02fc03e7))
+
 ## [1.1.9](https://github.com/dov118/eso-status/compare/1.1.8...1.1.9) (27/04/2021)
 
 ### Code Refactoring

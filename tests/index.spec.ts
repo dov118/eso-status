@@ -622,6 +622,16 @@ describe('getInformationLineServerSlug', function () {
             'ps4_eu'
         ]);
     });
+
+    it('check format - (We are currently investigating issues some players are having on the North American PC/Mac megaserver.)', function() {
+        const initialData = "We are currently investigating issues some players are having on the North American PC/Mac megaserver.";
+
+        const slug = EsoStatus.getInformationLineServerSlug(initialData);
+
+        expect(slug).toEqual([
+            'pc_na'
+        ]);
+    });
 });
 
 describe('getInformationLineServerStatus', function () {
@@ -927,6 +937,14 @@ describe('getInformationLineServerStatus', function () {
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
         expect(status).toEqual('up');
+    });
+
+    it('check format - (We are currently investigating issues some players are having on the North American PC/Mac megaserver.)', function() {
+        const initialData = "We are currently investigating issues some players are having on the North American PC/Mac megaserver.";
+
+        const status = EsoStatus.getInformationLineServerStatus(initialData);
+
+        expect(status).toEqual('issues');
     });
 });
 
