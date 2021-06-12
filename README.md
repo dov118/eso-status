@@ -5,6 +5,7 @@
 [![Dependency Status](https://img.shields.io/david/dov118/eso-status.svg)](https://www.npmjs.com/package/@dov118/eso-status)
 [![devDependency Status](https://img.shields.io/david/dev/dov118/eso-status.svg)](https://www.npmjs.com/package/@dov118/eso-status)
 [![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/dov118/eso-status)](https://lgtm.com/projects/g/dov118/eso-status/context:javascript)
+[![node](https://img.shields.io/node/v/@dov118/eso-status)](https://www.npmjs.com/package/@dov118/eso-status)
 
 Eso-status is a library for getting and formatting data can founded in [https://help.elderscrollsonline.com/app/answers/detail/a_id/4320](https://help.elderscrollsonline.com/app/answers/detail/a_id/4320)
 

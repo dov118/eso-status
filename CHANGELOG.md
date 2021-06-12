@@ -1,3 +1,9 @@
+## [1.2.2](https://github.com/dov118/eso-status/compare/1.2.1...1.2.2) (2021-06-11)
+
+### Code Refactoring
+* Update **version control** for node and npm version ([bc3e4e2](https://github.com/dov118/eso-status/commit/bc3e4e27a4bd9bd9a4e94d2aa21586ffe9f44619))
+* Update **README.md** ([8669727](https://github.com/dov118/eso-status/commit/86697270db351663209cad08771ebe321ebeaf5b))
+
 ## [1.2.1](https://github.com/dov118/eso-status/compare/1.2.0...1.2.1) (2021-06-11)
 
 ### Features
