@@ -1,5 +1,5 @@
 # ESO-STATUS
-Eso-status is a library for getting and formatting data can founded in https://help.elderscrollsonline.com/app/answers/detail/a_id/4320/~/service-alerts
+Eso-status is a library for getting and formatting data can founded in [https://help.elderscrollsonline.com/app/answers/detail/a_id/4320](https://help.elderscrollsonline.com/app/answers/detail/a_id/4320)
 
 ## Table of Contents
 - [How to get it ?](#how-to-get-it-)
@@ -7,10 +7,13 @@ Eso-status is a library for getting and formatting data can founded in https://h
 - [Returned data format](#returned-data-format-)
 
 ### How to get it ?
-[![npm package](https://nodeico.herokuapp.com/@dov118/eso-status.svg)](https://nodei.co/npm/@dov118/eso-status/)
+[![NPM](https://nodei.co/npm/@dov118/eso-status.png?downloads=true&downloadRank=true)](https://nodei.co/npm/@dov118/eso-status)
 
 [![npm version](https://img.shields.io/npm/v/@dov118/eso-status.svg)](https://www.npmjs.com/package/@dov118/eso-status)
 [![Downloads](https://img.shields.io/npm/dm/@dov118/eso-status.svg)](https://www.npmjs.com/package/@dov118/eso-status)
+[![Dependency Status](https://status.david-dm.org/gh/dov118/eso-status.svg)](https://status.david-dm.org/gh/dov118/eso-status)
+[![devDependency Status](https://status.david-dm.org/gh/dov118/eso-status.svg?type=dev)](https://david-dm.org/dov118/eso-status#info=devDependencies)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dov118/eso-status.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dov118/eso-status/context:javascript)
 
 ```shell
 npm i @dov118/eso-status

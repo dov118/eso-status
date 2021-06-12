@@ -35,7 +35,16 @@ export class EsoStatus {
      * @return string Raw list content of the website
      */
     public static getRawListContent(rawContent: string): string {
-        return /<div><!-- ENTER ESO SERVICE ALERTS BELOW THIS LINE -->.*?<p>&nbsp;<\/p>/s.exec(rawContent)?.join('') ?? '';
+        const resultRemoveBefore: string[] = rawContent.split('<div><!-- ENTER ESO SERVICE ALERTS BELOW THIS LINE -->');
+        if(resultRemoveBefore.length >= 2) {
+            const resultRemoveAfter: string[] = resultRemoveBefore[1].split('<p>&nbsp;</p>');
+
+            if(resultRemoveAfter.length >= 2) {
+                return `<div><!-- ENTER ESO SERVICE ALERTS BELOW THIS LINE -->${resultRemoveAfter[0]}<p>&nbsp;</p>`;
+            }
+        }
+
+        return '';
     }
 
     /**
@@ -45,19 +54,14 @@ export class EsoStatus {
      * @return InformationBlock[] Raw content list from list content
      */
     public static getRawContentItemList(rawListContent: string): InformationBlock[] {
-        const rawContentItemList: InformationBlock[] = [];
-        const regex: RegExp = /.*?<hr \/>/gs;
-        let m;
-        // tslint:disable-next-line:no-conditional-assignment
-        while ((m = regex.exec(rawListContent)) !== null) {
-            m.forEach((match: string): void => {
-                rawContentItemList.push({
-                    raw: match,
-                });
+        return rawListContent
+            .split('<hr />')
+            .filter((item: string): boolean => !item.includes('&nbsp;'))
+            .map((item: string): InformationBlock => {
+                return {
+                    raw: `${item}<hr />`
+                }
             });
-        }
-
-        return rawContentItemList;
     }
 
     /**
@@ -67,6 +71,31 @@ export class EsoStatus {
      * @return InformationBlock[] Raw lines from raw content list
      */
     public static getRawContentItemLines(rawContentItemList: InformationBlock[]): InformationBlock[] {
+        return rawContentItemList.map((item: InformationBlock): InformationBlock => {
+            const lines: string[] = item.raw.split('<p>').map((line: string): string => {
+                const lineClear: string[] = line.split('</p>');
+
+                return lineClear.length >= 2 ? lineClear[0] : '';
+            }).filter((line: string): boolean => line !== '');
+
+            item.information_lines = [];
+            lines.forEach((line: string, index: number): void => {
+                if (index === 0) {
+                    item.date_line = {
+                        raw: line,
+                    };
+                } else {
+                    item.information_lines?.push({
+                        raw: line,
+                    });
+                }
+            });
+
+            return item;
+        });
+
+
+        /*
         return rawContentItemList.map(
             (item: InformationBlock): InformationBlock => {
                 // @ts-ignore
@@ -95,6 +124,8 @@ export class EsoStatus {
                 return item;
             },
         );
+
+         */
     }
 
     /**

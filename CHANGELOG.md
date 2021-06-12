@@ -1,3 +1,9 @@
+## [1.1.11](https://github.com/dov118/eso-status/compare/1.1.10...1.1.11) (03/05/2021)
+
+### Code Refactoring
+* Update **README.md** ([b34dc49](https://github.com/dov118/eso-status/commit/b34dc4994fa1922afce43527d44815fb21774352))
+* Replace polynomial regular expression used on uncontrolled data ([ba88f25](https://github.com/dov118/eso-status/commit/ba88f258ee694d2d75eca2dfa3ffd59094819e0d))
+
 ## [1.1.10](https://github.com/dov118/eso-status/compare/1.1.9...1.1.10) (01/05/2021)
 
 ### Features
