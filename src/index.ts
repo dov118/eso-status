@@ -257,6 +257,15 @@ export class EsoStatus {
             slugs.push('pc_eu');
         }
 
+        if(raw.includes('the megaservers')) {
+            slugs.push('pc_na');
+            slugs.push('pc_eu');
+            slugs.push('xbox_na');
+            slugs.push('xbox_eu');
+            slugs.push('ps4_na');
+            slugs.push('ps4_eu');
+        }
+
         return slugs;
     }
 

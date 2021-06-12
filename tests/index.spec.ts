@@ -218,8 +218,8 @@ describe('getBlockInformation()', function () {
 });
 
 // Last:
-// 2021.03.15 - 21:15 UTC (17:15 EDT)
-// Xbox Live™ is currently experiencing a service interruption.
+// 2021.03.31 - 19:30 UTC (15:30 EDT)
+// We are currently investigating issues some players are having logging into the megaservers.
 describe('getInformationLineServerSlug', function () {
     it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
         const initialData = "The issues affecting purchases in the ESO store have been resolved.";
@@ -595,11 +595,26 @@ describe('getInformationLineServerSlug', function () {
             'pc_eu'
         ]);
     });
+
+    it('check format - (We are currently investigating issues some players are having logging into the megaservers.)', function() {
+        const initialData = "We are currently investigating issues some players are having logging into the megaservers.";
+
+        const slug = EsoStatus.getInformationLineServerSlug(initialData);
+
+        expect(slug).toEqual([
+            'pc_na',
+            'pc_eu',
+            'xbox_na',
+            'xbox_eu',
+            'ps4_na',
+            'ps4_eu'
+        ]);
+    });
 });
 
 // Last:
-// 2021.03.15 - 21:15 UTC (17:15 EDT)
-// Xbox Live™ is currently experiencing a service interruption.
+// 2021.03.31 - 19:30 UTC (15:30 EDT)
+// We are currently investigating issues some players are having logging into the megaservers.
 describe('getInformationLineServerStatus', function () {
     it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
         const initialData = "The issues affecting purchases in the ESO store have been resolved.";
@@ -883,6 +898,14 @@ describe('getInformationLineServerStatus', function () {
 
     it('check format - (We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.)', function() {
         const initialData = "We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.";
+
+        const status = EsoStatus.getInformationLineServerStatus(initialData);
+
+        expect(status).toEqual('issues');
+    });
+
+    it('check format - (We are currently investigating issues some players are having logging into the megaservers.)', function() {
+        const initialData = "We are currently investigating issues some players are having logging into the megaservers.";
 
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
