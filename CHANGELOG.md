@@ -8,3 +8,7 @@
 ## 1.1.5
 
 - Add **The issues related to logging in to the megaservers have been resolved at this time.** status
+
+## 1.1.6
+
+- Update **ts-jest** from **26.5.2** to **26.5.4**
