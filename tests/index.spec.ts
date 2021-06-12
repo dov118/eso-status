@@ -1,6 +1,6 @@
-import {EsoStatus} from "../src";
+import {EsoStatus} from "../lib";
 
-const url = 'https://help.elderscrollsonline.com/app/answers/detail/a_id/4320/~/service-alerts';
+const url = 'https://help.elderscrollsonline.com/app/answers/detail/a_id/4320';
 
 describe('getWebSiteContent()', function() {
     it('check format', function() {
@@ -632,6 +632,16 @@ describe('getInformationLineServerSlug', function () {
             'pc_na'
         ]);
     });
+
+    it('check format - (We are currently investigating issues some players are having on the North American Xbox One megaserver.)', function() {
+        const initialData = "We are currently investigating issues some players are having on the North American Xbox One megaserver.";
+
+        const slug = EsoStatus.getInformationLineServerSlug(initialData);
+
+        expect(slug).toEqual([
+            'xbox_na'
+        ]);
+    });
 });
 
 describe('getInformationLineServerStatus', function () {
@@ -941,6 +951,14 @@ describe('getInformationLineServerStatus', function () {
 
     it('check format - (We are currently investigating issues some players are having on the North American PC/Mac megaserver.)', function() {
         const initialData = "We are currently investigating issues some players are having on the North American PC/Mac megaserver.";
+
+        const status = EsoStatus.getInformationLineServerStatus(initialData);
+
+        expect(status).toEqual('issues');
+    });
+
+    it('check format - (We are currently investigating issues some players are having on the North American Xbox One megaserver.)', function() {
+        const initialData = "We are currently investigating issues some players are having on the North American Xbox One megaserver.";
 
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 

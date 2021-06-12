@@ -9,7 +9,7 @@ export class EsoStatus {
      *
      * @return Promise<string> Raw content of the website
      */
-    public static getWebSiteContent(url: string = 'https://help.elderscrollsonline.com/app/answers/detail/a_id/4320/~/service-alerts'): Promise<string> {
+    public static getWebSiteContent(url: string = 'https://help.elderscrollsonline.com/app/answers/detail/a_id/4320'): Promise<string> {
         return new Promise<string>((resolve: (value: string) => void, reject: (error: Error | any) => void): void => {
             axios
                 .get<string>(url)

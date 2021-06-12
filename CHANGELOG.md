@@ -1,3 +1,16 @@
+## [1.1.13](https://github.com/dov118/eso-status/compare/1.1.12...1.1.13) (2021-05-26)
+
+### Features
+* Add **We are currently investigating issues some players are having on the North American Xbox One megaserver.** status ([ebd180d](https://github.com/dov118/eso-status/commit/ebd180d6e4bf2ff961a213df5e739bf68fcd6ef1))
+
+### Code Refactoring
+* Replace SERVICE ALERTS URL by a simplified version ([0f0105e](https://github.com/dov118/eso-status/commit/0f0105e9e9aa6b1d68cd7ef9bab11eed3052b1f5))
+* Update **CHANGELOG.md** ([2ee06d0](https://github.com/dov118/eso-status/commit/2ee06d0228c9f4293d3430eda1823397ea843b9b))
+* Change file to test in unitary test ([01acee2](https://github.com/dov118/eso-status/commit/01acee2fae742ddcc04670f5b86e92fec4727dbd))
+
+### Updates
+* Update **ts-jest** from **26.5.6** to **27.0.0** ([84e4b0d](https://github.com/dov118/eso-status/commit/84e4b0d17912c6d17563f92d3015aac14be592ba))
+
 ## [1.1.12](https://github.com/dov118/eso-status/compare/1.1.11...1.1.12) (2021-05-05)
 
 ### Updates
@@ -55,3 +68,32 @@
 ### Updates
 * Update **@types/jest** from **26.0.21** to **26.0.22** ([7191c37](https://github.com/dov118/eso-status/commit/7191c37dc1b818de2e4bcede8dd02d3b7e369d98))
 * Update **typescript** from **4.2.2** to **4.2.3** ([819e322](https://github.com/dov118/eso-status/commit/819e322780536a34a2e92ff73c3e279d7cd0122c))
+
+## 1.1.3 (2021-03-22)
+
+### Features
+* Add **Xbox Live™ is currently experiencing a service interruption.** status ([8e40ef7](https://github.com/dov118/eso-status/commit/8e40ef7a059b4d21952f151422215aa0f88681e0))
+* Add **The Xbox Live™ service interruption has been resolved.** status ([8e40ef7](https://github.com/dov118/eso-status/commit/8e40ef7a059b4d21952f151422215aa0f88681e0))
+* Add **We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.** status ([8e40ef7](https://github.com/dov118/eso-status/commit/8e40ef7a059b4d21952f151422215aa0f88681e0))
+
+## 1.1.2 (2021-02-24)
+
+### Features
+* Update **README.md** ([009ffa3](https://github.com/dov118/eso-status/commit/009ffa345cc4163f2645f8b4ad0302d103d7baba))
+
+## 1.1.1 (2021-02-24)
+
+### Features
+* Update **README.md** ([56750b6](https://github.com/dov118/eso-status/commit/56750b6cf9fabb0d4b239e9b8b6b032bb01afb3d))
+
+## 1.1.0 (2021-02-24)
+
+### Features
+* Add **unitary test** ([d63a75c](https://github.com/dov118/eso-status/commit/d63a75c8a14152bde2738f691a1f5e45e8dac5d0))
+
+### Code Refactoring
+* Replacing **request** lib by **axios** ([22914cc](https://github.com/dov118/eso-status/commit/22914cc7e8f3cb2e29ef5e65717553db6cee3db4))
+* Update **README.md** ([aa6dc2b](https://github.com/dov118/eso-status/commit/aa6dc2b07c0fe3a9ebf876ad1666d2fe86ea9d91))
+
+### Updates
+* Update **typescript** from **4.1.3** to **4.2.2** ([87de539](https://github.com/dov118/eso-status/commit/87de539b647fc42d1f8157e9d07a1ad1c024f133))
