@@ -217,9 +217,6 @@ describe('getBlockInformation()', function () {
     });
 });
 
-// Last:
-// 2021.04.15 - 18:10 UTC (14:10 EST)
-// The PTS is currently available.
 describe('getInformationLineServerSlug', function () {
     it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
         const initialData = "The issues affecting purchases in the ESO store have been resolved.";
@@ -627,9 +624,6 @@ describe('getInformationLineServerSlug', function () {
     });
 });
 
-// Last:
-// 2021.04.15 - 18:10 UTC (14:10 EST)
-// The PTS is currently available.
 describe('getInformationLineServerStatus', function () {
     it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
         const initialData = "The issues affecting purchases in the ESO store have been resolved.";
