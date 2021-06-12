@@ -248,6 +248,15 @@ export class EsoStatus {
             slugs.push('ps4_eu');
         }
 
+        if (raw.includes('Xbox Live™')) {
+            slugs.push('xbox_na');
+            slugs.push('xbox_eu');
+        }
+
+        if (raw.includes('North American and European PC/Mac megaservers')) {
+            slugs.push('pc_eu');
+        }
+
         return slugs;
     }
 

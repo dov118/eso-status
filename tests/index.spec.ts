@@ -218,8 +218,8 @@ describe('getBlockInformation()', function () {
 });
 
 // Last:
-// 2021.02.22 - 15:00 UTC (10:00 EST)
-// The PTS is currently available.
+// 2021.03.15 - 21:15 UTC (17:15 EDT)
+// Xbox Live™ is currently experiencing a service interruption.
 describe('getInformationLineServerSlug', function () {
     it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
         const initialData = "The issues affecting purchases in the ESO store have been resolved.";
@@ -562,11 +562,44 @@ describe('getInformationLineServerSlug', function () {
             'pc_na'
         ]);
     });
+
+    it('check format - (Xbox Live™ is currently experiencing a service interruption.)', function() {
+        const initialData = "Xbox Live™ is currently experiencing a service interruption.";
+
+        const slug = EsoStatus.getInformationLineServerSlug(initialData);
+
+        expect(slug).toEqual([
+            'xbox_na',
+            'xbox_eu'
+        ]);
+    });
+
+    it('check format - (The Xbox Live™ service interruption has been resolved.)', function() {
+        const initialData = "The Xbox Live™ service interruption has been resolved.";
+
+        const slug = EsoStatus.getInformationLineServerSlug(initialData);
+
+        expect(slug).toEqual([
+            'xbox_na',
+            'xbox_eu'
+        ]);
+    });
+
+    it('check format - (We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.)', function() {
+        const initialData = "We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.";
+
+        const slug = EsoStatus.getInformationLineServerSlug(initialData);
+
+        expect(slug).toEqual([
+            'pc_na',
+            'pc_eu'
+        ]);
+    });
 });
 
 // Last:
-// 2021.02.22 - 15:00 UTC (10:00 EST)
-// The PTS is currently available.
+// 2021.03.15 - 21:15 UTC (17:15 EDT)
+// Xbox Live™ is currently experiencing a service interruption.
 describe('getInformationLineServerStatus', function () {
     it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
         const initialData = "The issues affecting purchases in the ESO store have been resolved.";
@@ -830,6 +863,30 @@ describe('getInformationLineServerStatus', function () {
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
         expect(status).toEqual('up');
+    });
+
+    it('check format - (Xbox Live™ is currently experiencing a service interruption.)', function() {
+        const initialData = "Xbox Live™ is currently experiencing a service interruption.";
+
+        const status = EsoStatus.getInformationLineServerStatus(initialData);
+
+        expect(status).toEqual('issues');
+    });
+
+    it('check format - (The Xbox Live™ service interruption has been resolved.)', function() {
+        const initialData = "The Xbox Live™ service interruption has been resolved.";
+
+        const status = EsoStatus.getInformationLineServerStatus(initialData);
+
+        expect(status).toEqual('up');
+    });
+
+    it('check format - (We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.)', function() {
+        const initialData = "We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.";
+
+        const status = EsoStatus.getInformationLineServerStatus(initialData);
+
+        expect(status).toEqual('issues');
     });
 });
 
