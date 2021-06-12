@@ -218,8 +218,9 @@ describe('getBlockInformation()', function () {
 });
 
 // Last:
-// 2021.03.31 - 21:30 UTC (17:30 EDT)
-// The issues related to logging in to the megaservers have been resolved at this time.
+// 2021.04.06 - 6:35 UTC (2:35 EDT)
+// The North American PlayStation®4 megaserver is currently available.
+// The European PlayStation®4 megaserver is currently available.
 describe('getInformationLineServerSlug', function () {
     it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
         const initialData = "The issues affecting purchases in the ESO store have been resolved.";
@@ -628,8 +629,9 @@ describe('getInformationLineServerSlug', function () {
 });
 
 // Last:
-// 2021.03.31 - 21:30 UTC (17:30 EDT)
-// The issues related to logging in to the megaservers have been resolved at this time.
+// 2021.04.06 - 6:35 UTC (2:35 EDT)
+// The North American PlayStation®4 megaserver is currently available.
+// The European PlayStation®4 megaserver is currently available.
 describe('getInformationLineServerStatus', function () {
     it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
         const initialData = "The issues affecting purchases in the ESO store have been resolved.";
