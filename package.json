@@ -1,6 +1,6 @@
 {
   "name": "@dov118/eso-status",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Library used to get servers status of The elders scrolls Online game",
   "main": "lib/index.js",
   "scripts": {

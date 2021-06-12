@@ -218,8 +218,8 @@ describe('getBlockInformation()', function () {
 });
 
 // Last:
-// 2021.03.31 - 19:30 UTC (15:30 EDT)
-// We are currently investigating issues some players are having logging into the megaservers.
+// 2021.03.31 - 21:30 UTC (17:30 EDT)
+// The issues related to logging in to the megaservers have been resolved at this time.
 describe('getInformationLineServerSlug', function () {
     it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
         const initialData = "The issues affecting purchases in the ESO store have been resolved.";
@@ -610,11 +610,26 @@ describe('getInformationLineServerSlug', function () {
             'ps4_eu'
         ]);
     });
+
+    it('check format - (The issues related to logging in to the megaservers have been resolved at this time.)', function() {
+        const initialData = "The issues related to logging in to the megaservers have been resolved at this time.";
+
+        const slug = EsoStatus.getInformationLineServerSlug(initialData);
+
+        expect(slug).toEqual([
+            'pc_na',
+            'pc_eu',
+            'xbox_na',
+            'xbox_eu',
+            'ps4_na',
+            'ps4_eu'
+        ]);
+    });
 });
 
 // Last:
-// 2021.03.31 - 19:30 UTC (15:30 EDT)
-// We are currently investigating issues some players are having logging into the megaservers.
+// 2021.03.31 - 21:30 UTC (17:30 EDT)
+// The issues related to logging in to the megaservers have been resolved at this time.
 describe('getInformationLineServerStatus', function () {
     it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
         const initialData = "The issues affecting purchases in the ESO store have been resolved.";
@@ -910,6 +925,14 @@ describe('getInformationLineServerStatus', function () {
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
         expect(status).toEqual('issues');
+    });
+
+    it('check format - (The issues related to logging in to the megaservers have been resolved at this time.)', function() {
+        const initialData = "The issues related to logging in to the megaservers have been resolved at this time.";
+
+        const status = EsoStatus.getInformationLineServerStatus(initialData);
+
+        expect(status).toEqual('up');
     });
 });
 
