@@ -29,7 +29,7 @@ EsoStatus.getEsoStatus().then((data: EsoServer[]): void => {
 ```
 - JavaScript
 ```javascript
-var EsoStatus = require("@dov118/eso-status");
+const {EsoStatus} = require("@dov118/eso-status");
 
 EsoStatus.getEsoStatus().then(function (data) {
 
