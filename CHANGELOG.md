@@ -1,3 +1,15 @@
+## [1.2.1](https://github.com/dov118/eso-status/compare/1.2.0...1.2.1) (2021-06-11)
+
+### Features
+* Add **The European Xbox megaserver is currently available.** status ([f486969](https://github.com/dov118/eso-status/commit/f4869690fe9cb9ab7d3812d09172d7d0ce4d2699))
+* Add **The North American Xbox megaserver is currently available.** status ([f486969](https://github.com/dov118/eso-status/commit/f4869690fe9cb9ab7d3812d09172d7d0ce4d2699))
+* Add **version control** for node and npm version ([155a237](https://github.com/dov118/eso-status/commit/155a237908503898783f463e234d1ccfdc3d3651))
+* Update **README.md** ([a3d4dcc](https://github.com/dov118/eso-status/commit/a3d4dccce4da6998635ddbe9a7c68ddfa6100394))
+
+### Updates
+
+* Update **ts-jest** from **27.0.2** to **27.0.3** ([8a0cb4e](https://github.com/dov118/eso-status/commit/8a0cb4ea3ee175c8da0152d8ab07ad736d52fee5))
+
 ## [1.2.0](https://github.com/dov118/eso-status/compare/1.1.14...1.2.0) (2021-06-03)
 
 ### Features

@@ -553,6 +553,26 @@ describe('getInformationLineServerSlug', function () {
             'pc_na'
         ]);
     });
+
+    it('check format - (The European Xbox megaserver is currently available.)', function() {
+        const initialData = "The European Xbox megaserver is currently available.";
+
+        const slug = EsoStatus.getInformationLineServerSlug(initialData);
+
+        expect(slug).toEqual([
+            'xbox_eu'
+        ]);
+    });
+
+    it('check format - (The North American Xbox megaserver is currently available.)', function() {
+        const initialData = "The North American Xbox megaserver is currently available.";
+
+        const slug = EsoStatus.getInformationLineServerSlug(initialData);
+
+        expect(slug).toEqual([
+            'xbox_na'
+        ]);
+    });
 });
 
 describe('getInformationLineServerStatus', function () {
@@ -818,6 +838,22 @@ describe('getInformationLineServerStatus', function () {
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
         expect(status).toEqual('issues');
+    });
+
+    it('check format - (The European Xbox megaserver is currently available.)', function() {
+        const initialData = "The European Xbox megaserver is currently available.";
+
+        const status = EsoStatus.getInformationLineServerStatus(initialData);
+
+        expect(status).toEqual('up');
+    });
+
+    it('check format - (The North American Xbox megaserver is currently available.)', function() {
+        const initialData = "The North American Xbox megaserver is currently available.";
+
+        const status = EsoStatus.getInformationLineServerStatus(initialData);
+
+        expect(status).toEqual('up');
     });
 });
 
