@@ -44,113 +44,96 @@ EsoStatus.getEsoStatus().then(function (data) {
 ### Returned data format ?
 ```text
 [
-  pts: {
-    raw_date: '2020.12.16 - 15:45 UTC (10:45 EST)',
-    raw_information: 'The PTS is currently available.',
-    date: '2020-12-16T15:45:00.000Z',
-    slug: 'pts',
-    support: 'none',
-    zone: 'none',
-    status: 'up'
-  },
-  ps4_na: {
-    raw_date: '2020.12.09 - 13:30 UTC (8:30 EST)',
-    raw_information: 'The North American PlayStation®4 megaserver is currently available.',
-    date: '2020-12-09T13:30:00.000Z',
-    slug: 'ps4_na',
-    support: 'ps4',
-    zone: 'na',
-    status: 'up'
-  },
-  ps4_eu: {
-    raw_date: '2020.12.09 - 13:30 UTC (8:30 EST)',
-    raw_information: 'The European PlayStation®4 megaserver is currently available.',
-    date: '2020-12-09T13:30:00.000Z',
-    slug: 'ps4_eu',
-    support: 'ps4',
-    zone: 'eu',
-    status: 'up'
-  },
-  site_web: {
-    raw_date: '2020.12.08 - 14:40 UTC (9:40 EST)',
-    raw_information: 'The ESO Website is currently online.',
-    date: '2020-12-08T14:40:00.000Z',
-    slug: 'site_web',
-    support: 'none',
-    zone: 'none',
-    status: 'up'
-  },
-  pc_na: {
-    raw_date: '2020.12.7 - 12:35 UTC (7:35 EDT)',
-    raw_information: 'The North American PC/Mac megaserver is currently available.',
-    date: '2020-12-07T12:35:00.000Z',
-    slug: 'pc_na',
-    support: 'pc',
-    zone: 'na',
-    status: 'up'
-  },
-  pc_eu: {
-    raw_date: '2020.12.7 - 12:35 UTC (7:35 EDT)',
-    raw_information: 'The European PC/Mac megaserver is currently available.',
-    date: '2020-12-07T12:35:00.000Z',
-    slug: 'pc_eu',
-    support: 'pc',
-    zone: 'eu',
-    status: 'up'
-  },
-  xbox_na: {
-    raw_date: '2020.12.05 - 08:15 UTC (03:15 EST)',
-    raw_information: 'The North American Xbox One megaserver is currently available.',
-    date: '2020-12-05T08:15:00.000Z',
-    slug: 'xbox_na',
-    support: 'xbox',
-    zone: 'na',
-    status: 'up'
-  },
-  xbox_eu: {
-    raw_date: '2020.12.05 - 08:15 UTC (03:15 EST)',
-    raw_information: 'The European Xbox One megaserver is currently available.',
-    date: '2020-12-05T08:15:00.000Z',
-    slug: 'xbox_eu',
-    support: 'xbox',
-    zone: 'eu',
-    status: 'up'
-  },
   eso_store: {
-    raw_date: '2020.12.03 - 19:05 UTC (14:05 EST)',
-    raw_information: 'The issues affecting purchases in the ESO store have been resolved.',
-    date: '2020-12-03T19:05:00.000Z',
+    raw_date: '2021.06.03 - 13:10 UTC (9:10 EDT)',
+    raw_information: 'The ESO store and account system are currently available.',
+    date: '2021-06-03T13:10:00.000Z',
     slug: 'eso_store',
     support: 'none',
     zone: 'none',
     status: 'up'
   },
   account_system: {
-    raw_date: '2020.11.18 - 16:40 UTC (11:40 EST)',
+    raw_date: '2021.06.03 - 13:10 UTC (9:10 EDT)',
     raw_information: 'The ESO store and account system are currently available.',
-    date: '2020-11-18T16:40:00.000Z',
+    date: '2021-06-03T13:10:00.000Z',
     slug: 'account_system',
     support: 'none',
     zone: 'none',
     status: 'up'
   },
-  crown_store: {
-    raw_date: '2020.11.03 - 18:30 UTC (13:30 EST)',
-    raw_information: 'The Crown Store is currently available.',
-    date: '2020-11-03T18:30:00.000Z',
-    slug: 'crown_store',
+  xbox_na: {
+    raw_date: '2021.06.02 - 15:45 UTC (11:45 EST)',
+    raw_information: 'The North American Xbox megaserver is currently available.',
+    date: '2021-06-02T15:45:00.000Z',
+    slug: 'xbox_na',
+    support: 'xbox',
+    zone: 'na',
+    status: 'up'
+  },
+  xbox_eu: {
+    raw_date: '2021.06.02 - 15:45 UTC (11:45 EST)',
+    raw_information: 'The European Xbox megaserver is currently available.',
+    date: '2021-06-02T15:45:00.000Z',
+    slug: 'xbox_eu',
+    support: 'xbox',
+    zone: 'eu',
+    status: 'up'
+  },
+  pc_na: {
+    raw_date: '2021.06.02 - 14:30 UTC (10:30 EDT)',
+    raw_information: 'The North American PC/Mac megaserver is currently available.',
+    date: '2021-06-02T14:30:00.000Z',
+    slug: 'pc_na',
+    support: 'pc',
+    zone: 'na',
+    status: 'up'
+  },
+  ps_na: {
+    raw_date: '2021.06.02 - 9:45 UTC (5:45 EST)',
+    raw_information: 'The North American PlayStation® megaserver is currently available.',
+    date: '2021-06-02T09:45:00.000Z',
+    slug: 'ps_na',
+    support: 'ps',
+    zone: 'na',
+    status: 'up'
+  },
+  ps_eu: {
+    raw_date: '2021.06.02 - 9:45 UTC (5:45 EST)',
+    raw_information: 'The European PlayStation® megaserver is currently available.',
+    date: '2021-06-02T09:45:00.000Z',
+    slug: 'ps_eu',
+    support: 'ps',
+    zone: 'eu',
+    status: 'up'
+  },
+  pc_eu: {
+    raw_date: '2021.06.01 - 10:20 UTC (6:20 EDT)',
+    raw_information: 'The European PC/Mac megaserver is currently available.',
+    date: '2021-06-01T10:20:00.000Z',
+    slug: 'pc_eu',
+    support: 'pc',
+    zone: 'eu',
+    status: 'up'
+  },
+  pts: {
+    raw_date: '2021.05.17 - 16:00 UTC (12:00 EDT)',
+    raw_information: 'The PTS is currently available.',
+    date: '2021-05-17T16:00:00.000Z',
+    slug: 'pts',
     support: 'none',
     zone: 'none',
     status: 'up'
   },
-  web_forum: {
-    raw_date: '2020.07.17 - 22:15 UTC (18:15 EDT)',
-    raw_information: 'The ESO Forums are currently available.',
-    date: '2020-07-17T22:15:00.000Z',
-    slug: 'web_forum',
+  site_web: {
+    raw_date: '2021.01.14 - 14:45 UTC (9:45 EST)',
+    raw_information: 'The ESO Website is currently online.',
+    date: '2021-01-14T14:45:00.000Z',
+    slug: 'site_web',
     support: 'none',
     zone: 'none',
     status: 'up'
   }
 ]
+
 ```

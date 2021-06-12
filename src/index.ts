@@ -183,7 +183,7 @@ export class EsoStatus {
         // console.log(raw);
         const slugs: ServerSlug[] = [];
 
-        if (raw.includes('Xbox One megaserver')) {
+        if (raw.includes('Xbox megaserver')) {
             if (raw.includes('North American')) {
                 slugs.push('xbox_na');
             } else if (raw.includes('European')) {
@@ -193,14 +193,14 @@ export class EsoStatus {
                 slugs.push('xbox_eu');
             }
         }
-        if (raw.includes('PlayStation®4 megaserver')) {
+        if (raw.includes('PlayStation® megaserver')) {
             if (raw.includes('North American')) {
-                slugs.push('ps4_na');
+                slugs.push('ps_na');
             } else if (raw.includes('European')) {
-                slugs.push('ps4_eu');
+                slugs.push('ps_eu');
             } else {
-                slugs.push('ps4_na');
-                slugs.push('ps4_eu');
+                slugs.push('ps_na');
+                slugs.push('ps_eu');
             }
         }
         if (raw.includes('PC/Mac megaserver')) {
@@ -216,12 +216,12 @@ export class EsoStatus {
         if (raw.includes('European megaservers')) {
             slugs.push('pc_eu');
             slugs.push('xbox_eu');
-            slugs.push('ps4_eu');
+            slugs.push('ps_eu');
         }
         if (raw.includes('North American megaservers')) {
             slugs.push('pc_na');
             slugs.push('xbox_na');
-            slugs.push('ps4_na');
+            slugs.push('ps_na');
         }
         if (raw.includes('ESO Website')) {
             slugs.push('site_web');
@@ -242,8 +242,8 @@ export class EsoStatus {
             slugs.push('account_system');
         }
         if (raw.includes('PlayStation® Network')) {
-            slugs.push('ps4_na');
-            slugs.push('ps4_eu');
+            slugs.push('ps_na');
+            slugs.push('ps_eu');
         }
 
         if (raw.includes('Xbox Live™')) {
@@ -260,8 +260,8 @@ export class EsoStatus {
             slugs.push('pc_eu');
             slugs.push('xbox_na');
             slugs.push('xbox_eu');
-            slugs.push('ps4_na');
-            slugs.push('ps4_eu');
+            slugs.push('ps_na');
+            slugs.push('ps_eu');
         }
 
         return slugs;
@@ -310,8 +310,8 @@ export class EsoStatus {
     public static getInformationLineServerSupport(serverSlug: ServerSlug): ServerSupport {
         if (serverSlug.includes('pc')) {
             return 'pc';
-        } else if (serverSlug.includes('ps4')) {
-            return 'ps4';
+        } else if (serverSlug.includes('ps')) {
+            return 'ps';
         } else if (serverSlug.includes('xbox')) {
             return 'xbox';
         }
@@ -504,7 +504,7 @@ export type ServerZone = 'na' | 'eu' | 'none';
 /**
  * Server/service support
  */
-export type ServerSupport = 'xbox' | 'ps4' | 'pc' | 'none';
+export type ServerSupport = 'xbox' | 'ps' | 'pc' | 'none';
 
 /**
  * Server/service slug
@@ -512,8 +512,8 @@ export type ServerSupport = 'xbox' | 'ps4' | 'pc' | 'none';
 type ServerSlug =
     | 'pc_eu'
     | 'pc_na'
-    | 'ps4_eu'
-    | 'ps4_na'
+    | 'ps_eu'
+    | 'ps_na'
     | 'xbox_eu'
     | 'xbox_na'
     | 'site_web'

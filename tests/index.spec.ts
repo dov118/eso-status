@@ -142,25 +142,6 @@ describe('getBlocksDate()', function() {
 });
 
 describe('getBlockInformation()', function () {
-    it('check format - (We are currently investigating connection issues some players are having on the North American Xbox One megaserver.)', function () {
-        const initialInformationLines = [{
-            raw: "We are currently investigating connection issues some players are having on the North American Xbox One megaserver."
-        }];
-
-        const newInformationLines = EsoStatus.getBlockInformation(initialInformationLines);
-
-        expect(typeof newInformationLines).toEqual('object');
-        expect(newInformationLines).toEqual([
-            {
-                raw: "We are currently investigating connection issues some players are having on the North American Xbox One megaserver.",
-                serverSlug: [
-                    'xbox_na'
-                ],
-                serverStatus: 'issues'
-            }
-        ]);
-    });
-
     it('check format - (The European megaservers are currently unavailable while we perform maintenance.)', function () {
         const initialInformationLines = [{
             raw: "The European megaservers are currently unavailable while we perform maintenance."
@@ -175,7 +156,7 @@ describe('getBlockInformation()', function () {
                 serverSlug: [
                     'pc_eu',
                     'xbox_eu',
-                    'ps4_eu'
+                    'ps_eu'
                 ],
                 serverStatus: 'down'
             }
@@ -200,7 +181,7 @@ describe('getBlockInformation()', function () {
                 serverSlug: [
                     'pc_na',
                     'xbox_na',
-                    'ps4_na'
+                    'ps_na'
                 ],
                 serverStatus: 'up'
             },
@@ -209,7 +190,7 @@ describe('getBlockInformation()', function () {
                 serverSlug: [
                     'pc_eu',
                     'xbox_eu',
-                    'ps4_eu'
+                    'ps_eu'
                 ],
                 serverStatus: 'up'
             }
@@ -248,73 +229,43 @@ describe('getInformationLineServerSlug', function () {
         ]);
     });
 
-    it('check format - (We are currently investigating connection issues some players are having on the North American Xbox One megaserver.)', function() {
-        const initialData = "We are currently investigating connection issues some players are having on the North American Xbox One megaserver.";
+    it('check format - (The European PlayStation® megaserver is currently unavailable while we perform maintenance.)', function() {
+        const initialData = "The European PlayStation® megaserver is currently unavailable while we perform maintenance.";
 
         const slug = EsoStatus.getInformationLineServerSlug(initialData);
 
         expect(slug).toEqual([
-            'xbox_na'
+            'ps_eu'
         ]);
     });
 
-    it('check format - (The European PlayStation®4 megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European PlayStation®4 megaserver is currently unavailable while we perform maintenance.";
+    it('check format - (The European PlayStation® megaserver is currently available.)', function() {
+        const initialData = "The European PlayStation® megaserver is currently available.";
 
         const slug = EsoStatus.getInformationLineServerSlug(initialData);
 
         expect(slug).toEqual([
-            'ps4_eu'
+            'ps_eu'
         ]);
     });
 
-    it('check format - (The European PlayStation®4 megaserver is currently available.)', function() {
-        const initialData = "The European PlayStation®4 megaserver is currently available.";
+    it('check format - (The North American PlayStation® megaserver is currently unavailable while we perform maintenance.)', function() {
+        const initialData = "The North American PlayStation® megaserver is currently unavailable while we perform maintenance.";
 
         const slug = EsoStatus.getInformationLineServerSlug(initialData);
 
         expect(slug).toEqual([
-            'ps4_eu'
+            'ps_na'
         ]);
     });
 
-    it('check format - (We are currently investigating issues some players are having logging into the European PlayStation®4 megaserver.)', function() {
-        const initialData = "We are currently investigating issues some players are having logging into the European PlayStation®4 megaserver.";
+    it('check format - (The North American PlayStation® megaserver is currently available.)', function() {
+        const initialData = "The North American PlayStation® megaserver is currently available.";
 
         const slug = EsoStatus.getInformationLineServerSlug(initialData);
 
         expect(slug).toEqual([
-            'ps4_eu'
-        ]);
-    });
-
-    it('check format - (The issues related to logging in to the European PlayStation®4 megaserver have been resolved at this time.)', function() {
-        const initialData = "The issues related to logging in to the European PlayStation®4 megaserver have been resolved at this time.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'ps4_eu'
-        ]);
-    });
-
-    it('check format - (The North American PlayStation®4 megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American PlayStation®4 megaserver is currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'ps4_na'
-        ]);
-    });
-
-    it('check format - (The North American PlayStation®4 megaserver is currently available.)', function() {
-        const initialData = "The North American PlayStation®4 megaserver is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'ps4_na'
+            'ps_na'
         ]);
     });
 
@@ -324,8 +275,8 @@ describe('getInformationLineServerSlug', function () {
         const slug = EsoStatus.getInformationLineServerSlug(initialData);
 
         expect(slug).toEqual([
-            'ps4_na',
-            'ps4_eu'
+            'ps_na',
+            'ps_eu'
         ]);
     });
 
@@ -335,13 +286,13 @@ describe('getInformationLineServerSlug', function () {
         const slug = EsoStatus.getInformationLineServerSlug(initialData);
 
         expect(slug).toEqual([
-            'ps4_na',
-            'ps4_eu'
+            'ps_na',
+            'ps_eu'
         ]);
     });
 
-    it('check format - (The North American Xbox One megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American Xbox One megaserver is currently unavailable while we perform maintenance.";
+    it('check format - (The North American Xbox megaserver is currently unavailable while we perform maintenance.)', function() {
+        const initialData = "The North American Xbox megaserver is currently unavailable while we perform maintenance.";
 
         const slug = EsoStatus.getInformationLineServerSlug(initialData);
 
@@ -350,38 +301,8 @@ describe('getInformationLineServerSlug', function () {
         ]);
     });
 
-    it('check format - (The North American Xbox One megaserver is currently available.)', function() {
-        const initialData = "The North American Xbox One megaserver is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'xbox_na'
-        ]);
-    });
-
-    it('check format - (The European Xbox One megaserver is currently available.)', function() {
-        const initialData = "The European Xbox One megaserver is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'xbox_eu'
-        ]);
-    });
-
-    it('check format - (The connection issues for the North American Xbox One megaserver have been resolved at this time.)', function() {
-        const initialData = "The connection issues for the North American Xbox One megaserver have been resolved at this time.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'xbox_na'
-        ]);
-    });
-
-    it('check format - (The European Xbox One megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European Xbox One megaserver is currently unavailable while we perform maintenance.";
+    it('check format - (The European Xbox megaserver is currently unavailable while we perform maintenance.)', function() {
+        const initialData = "The European Xbox megaserver is currently unavailable while we perform maintenance.";
 
         const slug = EsoStatus.getInformationLineServerSlug(initialData);
 
@@ -420,7 +341,7 @@ describe('getInformationLineServerSlug', function () {
         expect(slug).toEqual([
             'pc_eu',
             'xbox_eu',
-            'ps4_eu'
+            'ps_eu'
         ]);
     });
 
@@ -432,7 +353,7 @@ describe('getInformationLineServerSlug', function () {
         expect(slug).toEqual([
             'pc_eu',
             'xbox_eu',
-            'ps4_eu'
+            'ps_eu'
         ]);
     });
 
@@ -444,7 +365,7 @@ describe('getInformationLineServerSlug', function () {
         expect(slug).toEqual([
             'pc_na',
             'xbox_na',
-            'ps4_na'
+            'ps_na'
         ]);
     });
 
@@ -456,7 +377,7 @@ describe('getInformationLineServerSlug', function () {
         expect(slug).toEqual([
             'pc_na',
             'xbox_na',
-            'ps4_na'
+            'ps_na'
         ]);
     });
 
@@ -603,8 +524,8 @@ describe('getInformationLineServerSlug', function () {
             'pc_eu',
             'xbox_na',
             'xbox_eu',
-            'ps4_na',
-            'ps4_eu'
+            'ps_na',
+            'ps_eu'
         ]);
     });
 
@@ -618,8 +539,8 @@ describe('getInformationLineServerSlug', function () {
             'pc_eu',
             'xbox_na',
             'xbox_eu',
-            'ps4_na',
-            'ps4_eu'
+            'ps_na',
+            'ps_eu'
         ]);
     });
 
@@ -630,16 +551,6 @@ describe('getInformationLineServerSlug', function () {
 
         expect(slug).toEqual([
             'pc_na'
-        ]);
-    });
-
-    it('check format - (We are currently investigating issues some players are having on the North American Xbox One megaserver.)', function() {
-        const initialData = "We are currently investigating issues some players are having on the North American Xbox One megaserver.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'xbox_na'
         ]);
     });
 });
@@ -669,56 +580,32 @@ describe('getInformationLineServerStatus', function () {
         expect(status).toEqual('up');
     });
 
-    it('check format - (We are currently investigating connection issues some players are having on the North American Xbox One megaserver.)', function() {
-        const initialData = "We are currently investigating connection issues some players are having on the North American Xbox One megaserver.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('issues');
-    });
-
-    it('check format - (The European PlayStation®4 megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European PlayStation®4 megaserver is currently unavailable while we perform maintenance.";
+    it('check format - (The European PlayStation® megaserver is currently unavailable while we perform maintenance.)', function() {
+        const initialData = "The European PlayStation® megaserver is currently unavailable while we perform maintenance.";
 
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
         expect(status).toEqual('down');
     });
 
-    it('check format - (The European PlayStation®4 megaserver is currently available.)', function() {
-        const initialData = "The European PlayStation®4 megaserver is currently available.";
+    it('check format - (The European PlayStation® megaserver is currently available.)', function() {
+        const initialData = "The European PlayStation® megaserver is currently available.";
 
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
         expect(status).toEqual('up');
     });
 
-    it('check format - (We are currently investigating issues some players are having logging into the European PlayStation®4 megaserver.)', function() {
-        const initialData = "We are currently investigating issues some players are having logging into the European PlayStation®4 megaserver.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('issues');
-    });
-
-    it('check format - (The issues related to logging in to the European PlayStation®4 megaserver have been resolved at this time.)', function() {
-        const initialData = "The issues related to logging in to the European PlayStation®4 megaserver have been resolved at this time.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The North American PlayStation®4 megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American PlayStation®4 megaserver is currently unavailable while we perform maintenance.";
+    it('check format - (The North American PlayStation® megaserver is currently unavailable while we perform maintenance.)', function() {
+        const initialData = "The North American PlayStation® megaserver is currently unavailable while we perform maintenance.";
 
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
         expect(status).toEqual('down');
     });
 
-    it('check format - (The North American PlayStation®4 megaserver is currently available.)', function() {
-        const initialData = "The North American PlayStation®4 megaserver is currently available.";
+    it('check format - (The North American PlayStation® megaserver is currently available.)', function() {
+        const initialData = "The North American PlayStation® megaserver is currently available.";
 
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
@@ -741,40 +628,16 @@ describe('getInformationLineServerStatus', function () {
         expect(status).toEqual('up');
     });
 
-    it('check format - (The North American Xbox One megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American Xbox One megaserver is currently unavailable while we perform maintenance.";
+    it('check format - (The North American Xbox megaserver is currently unavailable while we perform maintenance.)', function() {
+        const initialData = "The North American Xbox megaserver is currently unavailable while we perform maintenance.";
 
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
         expect(status).toEqual('down');
     });
 
-    it('check format - (The North American Xbox One megaserver is currently available.)', function() {
-        const initialData = "The North American Xbox One megaserver is currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The European Xbox One megaserver is currently available.)', function() {
-        const initialData = "The European Xbox One megaserver is currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The connection issues for the North American Xbox One megaserver have been resolved at this time.)', function() {
-        const initialData = "The connection issues for the North American Xbox One megaserver have been resolved at this time.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The European Xbox One megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European Xbox One megaserver is currently unavailable while we perform maintenance.";
+    it('check format - (The European Xbox megaserver is currently unavailable while we perform maintenance.)', function() {
+        const initialData = "The European Xbox megaserver is currently unavailable while we perform maintenance.";
 
         const status = EsoStatus.getInformationLineServerStatus(initialData);
 
@@ -956,14 +819,6 @@ describe('getInformationLineServerStatus', function () {
 
         expect(status).toEqual('issues');
     });
-
-    it('check format - (We are currently investigating issues some players are having on the North American Xbox One megaserver.)', function() {
-        const initialData = "We are currently investigating issues some players are having on the North American Xbox One megaserver.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('issues');
-    });
 });
 
 describe('getInformationLineServerZone', function () {
@@ -979,14 +834,14 @@ describe('getInformationLineServerZone', function () {
         expect(zone).toEqual('na');
     });
 
-    it('check format - (ps4_eu)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('ps4_eu');
+    it('check format - (ps_eu)', function() {
+        const zone = EsoStatus.getInformationLineServerZone('ps_eu');
 
         expect(zone).toEqual('eu');
     });
 
-    it('check format - (ps4_na)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('ps4_na');
+    it('check format - (ps_na)', function() {
+        const zone = EsoStatus.getInformationLineServerZone('ps_na');
 
         expect(zone).toEqual('na');
     });
@@ -1053,16 +908,16 @@ describe('getInformationLineServerSupport', function () {
         expect(support).toEqual('pc');
     });
 
-    it('check format - (ps4_eu)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('ps4_eu');
+    it('check format - (ps_eu)', function() {
+        const support = EsoStatus.getInformationLineServerSupport('ps_eu');
 
-        expect(support).toEqual('ps4');
+        expect(support).toEqual('ps');
     });
 
-    it('check format - (ps4_na)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('ps4_na');
+    it('check format - (ps_na)', function() {
+        const support = EsoStatus.getInformationLineServerSupport('ps_na');
 
-        expect(support).toEqual('ps4');
+        expect(support).toEqual('ps');
     });
 
     it('check format - (xbox_eu)', function() {

@@ -1,3 +1,25 @@
+## [1.2.0](https://github.com/dov118/eso-status/compare/1.1.14...1.2.0) (2021-06-03)
+
+### Features
+* Change **ps4** ServerSupport to **ps** ([6b5e5d2](https://github.com/dov118/eso-status/commit/6b5e5d2a19d26f4a3732c60c714ee9b9a3b80bbc))
+* Change **ps4_eu** ServerSlug to **ps_eu** ([6b5e5d2](https://github.com/dov118/eso-status/commit/6b5e5d2a19d26f4a3732c60c714ee9b9a3b80bbc))
+* Change **ps4_na** ServerSlug to **ps_na** ([6b5e5d2](https://github.com/dov118/eso-status/commit/6b5e5d2a19d26f4a3732c60c714ee9b9a3b80bbc))
+* Change **The European PlayStation®4 megaserver is currently unavailable while we perform maintenance.** to **The European PlayStation® megaserver is currently unavailable while we perform maintenance.** ([6b5e5d2](https://github.com/dov118/eso-status/commit/6b5e5d2a19d26f4a3732c60c714ee9b9a3b80bbc))
+* Change **The European PlayStation®4 megaserver is currently available.** to **The European PlayStation® megaserver is currently available.** ([6b5e5d2](https://github.com/dov118/eso-status/commit/6b5e5d2a19d26f4a3732c60c714ee9b9a3b80bbc))
+* Change **The North American PlayStation®4 megaserver is currently unavailable while we perform maintenance.** to **The North American PlayStation® megaserver is currently unavailable while we perform maintenance.** ([6b5e5d2](https://github.com/dov118/eso-status/commit/6b5e5d2a19d26f4a3732c60c714ee9b9a3b80bbc))
+* Change **The North American PlayStation®4 megaserver is currently available.** to **The North American PlayStation® megaserver is currently available.** ([6b5e5d2](https://github.com/dov118/eso-status/commit/6b5e5d2a19d26f4a3732c60c714ee9b9a3b80bbc))
+* Change **The North American Xbox One megaserver is currently unavailable while we perform maintenance.** to **The North American Xbox megaserver is currently unavailable while we perform maintenance.** ([6b5e5d2](https://github.com/dov118/eso-status/commit/6b5e5d2a19d26f4a3732c60c714ee9b9a3b80bbc))
+* Change **The European Xbox One megaserver is currently unavailable while we perform maintenance.** to **The European Xbox megaserver is currently unavailable while we perform maintenance.** ([6b5e5d2](https://github.com/dov118/eso-status/commit/6b5e5d2a19d26f4a3732c60c714ee9b9a3b80bbc))
+
+### Updates
+
+* Update **jest** from **27.0.1** to **27.0.4** ([8877079](https://github.com/dov118/eso-status/commit/8877079a0b71ed05288f2f4d052852f7b38c4f3b))
+* Update **ts-jest** from **27.0.1** to **27.0.2** ([4a90633](https://github.com/dov118/eso-status/commit/4a90633add01cb87c25829a47435d83c86252774))
+
+### Code Refactoring
+
+* Update **README.md** with new ServerSupport and ServerSlug ([b702c9b](https://github.com/dov118/eso-status/commit/b702c9b24c85e3975c5c035a7367cb572d2c02f5))
+
 ## [1.1.14](https://github.com/dov118/eso-status/compare/1.1.13...1.1.14) (2021-05-28)
 
 ### Updates
