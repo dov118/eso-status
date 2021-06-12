@@ -19,9 +19,9 @@ npm i @dov118/eso-status
 ### How to use it ?
 - TypeScript
 ```typescript
-import {EsoStatus, EsoServer} from "@dov118/eso-status";
+import {EsoServer, EsoStatus} from "@dov118/eso-status";
 
-EsoStatus.then((data: EsoServer[]): void => {
+EsoStatus.getEsoStatus().then((data: EsoServer[]): void => {
 
 }).catch((error: Error): void => {
 
@@ -29,9 +29,9 @@ EsoStatus.then((data: EsoServer[]): void => {
 ```
 - JavaScript
 ```javascript
-var eso_status = require("@dov118/eso-status");
+var EsoStatus = require("@dov118/eso-status");
 
-eso_status.EsoStatus.then(function (data) {
+EsoStatus.getEsoStatus().then(function (data) {
 
 }).catch(function (error) {
 
