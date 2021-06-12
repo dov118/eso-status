@@ -1,3 +1,13 @@
+## [1.1.14](https://github.com/dov118/eso-status/compare/1.1.13...1.1.14) (2021-05-28)
+
+### Updates
+
+* Update **ts-jest** from **27.0.0** to **27.0.1** ([9620430](https://github.com/dov118/eso-status/commit/9620430ffa6c7e601fd2a255b12b66656720eb3b))
+* Update **typescript** from **4.2.4** to **4.3.2** ([b8394ec](https://github.com/dov118/eso-status/commit/b8394ecfcc89e842f8054079b6b342e7b022081b))
+
+### Code Refactoring
+* Add **jest** to run unitary test with **jest** command ([33f1610](https://github.com/dov118/eso-status/commit/33f16109c0c274edd71e19a6978f8ede8b8924ef))
+
 ## [1.1.13](https://github.com/dov118/eso-status/compare/1.1.12...1.1.13) (2021-05-26)
 
 ### Features
