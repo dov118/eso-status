@@ -16,3 +16,7 @@
 ## 1.1.7
 
 - Update **typescript** from **4.2.3** to **4.2.4**
+
+## 1.1.8
+
+- Update **ts-jest** from **26.5.4** to **26.5.5**
