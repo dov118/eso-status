@@ -212,7 +212,7 @@ const raw_exemples = [
         rawStatus: "The North American Xbox megaserver is currently available.",
         slugs: ['xbox_na'],
         status: 'up',
-    }
+    },
 ]
 
 const slug_zone_support_exemples = [
