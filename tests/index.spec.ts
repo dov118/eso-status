@@ -2,6 +2,234 @@ import {EsoStatus} from "../lib";
 
 const url = 'https://help.elderscrollsonline.com/app/answers/detail/a_id/4320';
 
+const raw_exemples = [
+    {
+        index: 1,
+        rawStatus: "The issues affecting purchases in the ESO store have been resolved.",
+        slugs: ['eso_store'],
+        status: 'up',
+    },
+    {
+        index: 2,
+        rawStatus: "The Crown Store is currently available.",
+        slugs: ['crown_store'],
+        status: 'up',
+    },
+    {
+        index: 3,
+        rawStatus: "The ESO Forums are currently available.",
+        slugs: ['web_forum'],
+        status: 'up',
+    },
+    {
+        index: 4,
+        rawStatus: "The European PlayStation® megaserver is currently unavailable while we perform maintenance.",
+        slugs: ['ps_eu'],
+        status: 'down',
+    },
+    {
+        index: 5,
+        rawStatus: "The European PlayStation® megaserver is currently available.",
+        slugs: ['ps_eu'],
+        status: 'up',
+    },
+    {
+        index: 6,
+        rawStatus: "The North American PlayStation® megaserver is currently unavailable while we perform maintenance.",
+        slugs: ['ps_na'],
+        status: 'down',
+    },
+    {
+        index: 7,
+        rawStatus: "The North American PlayStation® megaserver is currently available.",
+        slugs: ['ps_na'],
+        status: 'up',
+    },
+    {
+        index: 8,
+        rawStatus: "The PlayStation® Network is currently experiencing a service interruption.",
+        slugs: ['ps_na', 'ps_eu'],
+        status: 'issues',
+    },
+    {
+        index: 9,
+        rawStatus: "The PlayStation® Network service interruption has been resolved.",
+        slugs: ['ps_na', 'ps_eu'],
+        status: 'up',
+    },
+    {
+        index: 10,
+        rawStatus: "The North American Xbox megaserver is currently unavailable while we perform maintenance.",
+        slugs: ['xbox_na'],
+        status: 'down',
+    },
+    {
+        index: 11,
+        rawStatus: "The European Xbox megaserver is currently unavailable while we perform maintenance.",
+        slugs: ['xbox_eu'],
+        status: 'down',
+    },
+    {
+        index: 12,
+        rawStatus: "The ESO store and account system are currently unavailable while we perform maintenance.",
+        slugs: ['eso_store', 'account_system'],
+        status: 'down',
+    },
+    {
+        index: 13,
+        rawStatus: "The ESO store and account system are currently available.",
+        slugs: ['eso_store', 'account_system'],
+        status: 'up',
+    },
+    {
+        index: 14,
+        rawStatus: "The European megaservers are currently unavailable while we perform maintenance.",
+        slugs: ['pc_eu', 'xbox_eu', 'ps_eu'],
+        status: 'down',
+    },
+    {
+        index: 15,
+        rawStatus: "The European megaservers are currently available.",
+        slugs: ['pc_eu', 'xbox_eu', 'ps_eu'],
+        status: 'up',
+    },
+    {
+        index: 16,
+        rawStatus: "The North American megaservers are currently unavailable while we perform maintenance.",
+        slugs: ['pc_na', 'xbox_na', 'ps_na'],
+        status: 'down',
+    },
+    {
+        index: 17,
+        rawStatus: "The North American megaservers are currently available.",
+        slugs: ['pc_na', 'xbox_na', 'ps_na'],
+        status: 'up',
+    },
+    {
+        index: 18,
+        rawStatus: "The ESO Website is currently unavailable while we perform maintenance.",
+        slugs: ['site_web'],
+        status: 'down',
+    },
+    {
+        index: 19,
+        rawStatus: "The ESO Website is currently online.",
+        slugs: ['site_web'],
+        status: 'up',
+    },
+    {
+        index: 20,
+        rawStatus: "The PTS is currently unavailable while we perform maintenance.",
+        slugs: ['pts'],
+        status: 'down',
+    },
+    {
+        index: 21,
+        rawStatus: "The PTS is currently available.",
+        slugs: ['pts'],
+        status: 'up',
+    },
+    {
+        index: 22,
+        rawStatus: "The European PC/Mac megaserver is currently unavailable while we perform maintenance.",
+        slugs: ['pc_eu'],
+        status: 'down',
+    },
+    {
+        index: 23,
+        rawStatus: "The European PC/Mac megaserver is currently available.",
+        slugs: ['pc_eu'],
+        status: 'up',
+    },
+    {
+        index: 24,
+        rawStatus: "We are currently investigating issues some players are having logging into the European PC/Mac megaserver.",
+        slugs: ['pc_eu'],
+        status: 'issues',
+    },
+    {
+        index: 25,
+        rawStatus: "The issues related to logging in to the European PC/Mac megaserver have been resolved at this time.",
+        slugs: ['pc_eu'],
+        status: 'up',
+    },
+    {
+        index: 26,
+        rawStatus: "The North American PC/Mac megaserver is currently unavailable while we perform maintenance.",
+        slugs: ['pc_na'],
+        status: 'down',
+    },
+    {
+        index: 27,
+        rawStatus: "The North American PC/Mac megaserver is currently available.",
+        slugs: ['pc_na'],
+        status: 'up',
+    },
+    {
+        index: 28,
+        rawStatus: "Xbox Live™ is currently experiencing a service interruption.",
+        slugs: ['xbox_na', 'xbox_eu'],
+        status: 'issues',
+    },
+    {
+        index: 29,
+        rawStatus: "The Xbox Live™ service interruption has been resolved.",
+        slugs: ['xbox_na', 'xbox_eu'],
+        status: 'up',
+    },
+    {
+        index: 30,
+        rawStatus: "We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.",
+        slugs: ['pc_na', 'pc_eu'],
+        status: 'issues',
+    },
+    {
+        index: 31,
+        rawStatus: "We are currently investigating issues some players are having logging into the megaservers.",
+        slugs: ['pc_na', 'pc_eu', 'xbox_na', 'xbox_eu', 'ps_na', 'ps_eu'],
+        status: 'issues',
+    },
+    {
+        index: 32,
+        rawStatus: "The issues related to logging in to the megaservers have been resolved at this time.",
+        slugs: ['pc_na', 'pc_eu', 'xbox_na', 'xbox_eu', 'ps_na', 'ps_eu'],
+        status: 'up',
+    },
+    {
+        index: 33,
+        rawStatus: "We are currently investigating issues some players are having on the North American PC/Mac megaserver.",
+        slugs: ['pc_na'],
+        status: 'issues',
+    },
+    {
+        index: 34,
+        rawStatus: "The European Xbox megaserver is currently available.",
+        slugs: ['xbox_eu'],
+        status: 'up',
+    },
+    {
+        index: 35,
+        rawStatus: "The North American Xbox megaserver is currently available.",
+        slugs: ['xbox_na'],
+        status: 'up',
+    }
+]
+
+const slug_zone_support_exemples = [
+    { slug: 'pc_eu', zone: 'eu', support: 'pc' },
+    { slug: 'pc_na', zone: 'na', support: 'pc' },
+    { slug: 'ps_eu', zone: 'eu', support: 'ps' },
+    { slug: 'ps_na', zone: 'na', support: 'ps' },
+    { slug: 'xbox_eu', zone: 'eu', support: 'xbox' },
+    { slug: 'xbox_na', zone: 'na', support: 'xbox' },
+    { slug: 'site_web', zone: 'none', support: 'none' },
+    { slug: 'pts', zone: 'none', support: 'none' },
+    { slug: 'web_forum', zone: 'none', support: 'none' },
+    { slug: 'crown_store', zone: 'none', support: 'none' },
+    { slug: 'eso_store', zone: 'none', support: 'none' },
+    { slug: 'account_system', zone: 'none', support: 'none' },
+];
+
 describe('getWebSiteContent()', function() {
     it('check format', function() {
         EsoStatus.getWebSiteContent(url).then((data: any) => {
@@ -199,809 +427,42 @@ describe('getBlockInformation()', function () {
 });
 
 describe('getInformationLineServerSlug', function () {
-    it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
-        const initialData = "The issues affecting purchases in the ESO store have been resolved.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'eso_store'
-        ]);
-    });
-
-    it('check format - (The Crown Store is currently available.)', function() {
-        const initialData = "The Crown Store is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'crown_store'
-        ]);
-    });
-
-    it('check format - (The ESO Forums are currently available.)', function() {
-        const initialData = "The ESO Forums are currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'web_forum'
-        ]);
-    });
-
-    it('check format - (The European PlayStation® megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European PlayStation® megaserver is currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'ps_eu'
-        ]);
-    });
-
-    it('check format - (The European PlayStation® megaserver is currently available.)', function() {
-        const initialData = "The European PlayStation® megaserver is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'ps_eu'
-        ]);
-    });
-
-    it('check format - (The North American PlayStation® megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American PlayStation® megaserver is currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'ps_na'
-        ]);
-    });
-
-    it('check format - (The North American PlayStation® megaserver is currently available.)', function() {
-        const initialData = "The North American PlayStation® megaserver is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'ps_na'
-        ]);
-    });
-
-    it('check format - (The PlayStation® Network is currently experiencing a service interruption.)', function() {
-        const initialData = "The PlayStation® Network is currently experiencing a service interruption.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'ps_na',
-            'ps_eu'
-        ]);
-    });
-
-    it('check format - (The PlayStation® Network service interruption has been resolved.)', function() {
-        const initialData = "The PlayStation® Network service interruption has been resolved.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'ps_na',
-            'ps_eu'
-        ]);
-    });
-
-    it('check format - (The North American Xbox megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American Xbox megaserver is currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'xbox_na'
-        ]);
-    });
-
-    it('check format - (The European Xbox megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European Xbox megaserver is currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'xbox_eu'
-        ]);
-    });
-
-    it('check format - (The ESO store and account system are currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The ESO store and account system are currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'eso_store',
-            'account_system'
-        ]);
-    });
-
-    it('check format - (The ESO store and account system are currently available.)', function() {
-        const initialData = "The ESO store and account system are currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'eso_store',
-            'account_system'
-        ]);
-    });
-
-    it('check format - (The European megaservers are currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European megaservers are currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_eu',
-            'xbox_eu',
-            'ps_eu'
-        ]);
-    });
-
-    it('check format - (The European megaservers are currently available.)', function() {
-        const initialData = "The European megaservers are currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_eu',
-            'xbox_eu',
-            'ps_eu'
-        ]);
-    });
-
-    it('check format - (The North American megaservers are currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American megaservers are currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_na',
-            'xbox_na',
-            'ps_na'
-        ]);
-    });
-
-    it('check format - (The North American megaservers are currently available.)', function() {
-        const initialData = "The North American megaservers are currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_na',
-            'xbox_na',
-            'ps_na'
-        ]);
-    });
-
-    it('check format - (The ESO Website is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The ESO Website is currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'site_web'
-        ]);
-    });
-
-    it('check format - (The ESO Website is currently online.)', function() {
-        const initialData = "The ESO Website is currently online.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'site_web'
-        ]);
-    });
-
-    it('check format - (The PTS is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The PTS is currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pts'
-        ]);
-    });
-
-    it('check format - (The PTS is currently available.)', function() {
-        const initialData = "The PTS is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pts'
-        ]);
-    });
-
-    it('check format - (The European PC/Mac megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European PC/Mac megaserver is currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_eu'
-        ]);
-    });
-
-    it('check format - (The European PC/Mac megaserver is currently available.)', function() {
-        const initialData = "The European PC/Mac megaserver is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_eu'
-        ]);
-    });
-
-    it('check format - (We are currently investigating issues some players are having logging into the European PC/Mac megaserver.)', function() {
-        const initialData = "We are currently investigating issues some players are having logging into the European PC/Mac megaserver.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_eu'
-        ]);
-    });
-
-    it('check format - (The issues related to logging in to the European PC/Mac megaserver have been resolved at this time.)', function() {
-        const initialData = "The issues related to logging in to the European PC/Mac megaserver have been resolved at this time.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_eu'
-        ]);
-    });
-
-    it('check format - (The North American PC/Mac megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American PC/Mac megaserver is currently unavailable while we perform maintenance.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_na'
-        ]);
-    });
-
-    it('check format - (The North American PC/Mac megaserver is currently available.)', function() {
-        const initialData = "The North American PC/Mac megaserver is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_na'
-        ]);
-    });
-
-    it('check format - (Xbox Live™ is currently experiencing a service interruption.)', function() {
-        const initialData = "Xbox Live™ is currently experiencing a service interruption.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'xbox_na',
-            'xbox_eu'
-        ]);
-    });
-
-    it('check format - (The Xbox Live™ service interruption has been resolved.)', function() {
-        const initialData = "The Xbox Live™ service interruption has been resolved.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'xbox_na',
-            'xbox_eu'
-        ]);
-    });
-
-    it('check format - (We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.)', function() {
-        const initialData = "We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_na',
-            'pc_eu'
-        ]);
-    });
-
-    it('check format - (We are currently investigating issues some players are having logging into the megaservers.)', function() {
-        const initialData = "We are currently investigating issues some players are having logging into the megaservers.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_na',
-            'pc_eu',
-            'xbox_na',
-            'xbox_eu',
-            'ps_na',
-            'ps_eu'
-        ]);
-    });
-
-    it('check format - (The issues related to logging in to the megaservers have been resolved at this time.)', function() {
-        const initialData = "The issues related to logging in to the megaservers have been resolved at this time.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_na',
-            'pc_eu',
-            'xbox_na',
-            'xbox_eu',
-            'ps_na',
-            'ps_eu'
-        ]);
-    });
-
-    it('check format - (We are currently investigating issues some players are having on the North American PC/Mac megaserver.)', function() {
-        const initialData = "We are currently investigating issues some players are having on the North American PC/Mac megaserver.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'pc_na'
-        ]);
-    });
-
-    it('check format - (The European Xbox megaserver is currently available.)', function() {
-        const initialData = "The European Xbox megaserver is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'xbox_eu'
-        ]);
-    });
-
-    it('check format - (The North American Xbox megaserver is currently available.)', function() {
-        const initialData = "The North American Xbox megaserver is currently available.";
-
-        const slug = EsoStatus.getInformationLineServerSlug(initialData);
-
-        expect(slug).toEqual([
-            'xbox_na'
-        ]);
+    raw_exemples.forEach((exemple: any): void => {
+        it(`check format (${exemple.index}) - (${exemple.rawStatus})`, function() {
+            const slug = EsoStatus.getInformationLineServerSlug(exemple.rawStatus);
+
+            expect(slug).toEqual(exemple.slugs);
+        });
     });
 });
 
 describe('getInformationLineServerStatus', function () {
-    it('check format - (The issues affecting purchases in the ESO store have been resolved.)', function() {
-        const initialData = "The issues affecting purchases in the ESO store have been resolved.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The Crown Store is currently available.)', function() {
-        const initialData = "The Crown Store is currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The ESO Forums are currently available.)', function() {
-        const initialData = "The ESO Forums are currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The European PlayStation® megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European PlayStation® megaserver is currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The European PlayStation® megaserver is currently available.)', function() {
-        const initialData = "The European PlayStation® megaserver is currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The North American PlayStation® megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American PlayStation® megaserver is currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The North American PlayStation® megaserver is currently available.)', function() {
-        const initialData = "The North American PlayStation® megaserver is currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The PlayStation® Network is currently experiencing a service interruption.)', function() {
-        const initialData = "The PlayStation® Network is currently experiencing a service interruption.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('issues');
-    });
-
-    it('check format - (The PlayStation® Network service interruption has been resolved.)', function() {
-        const initialData = "The PlayStation® Network service interruption has been resolved.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The North American Xbox megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American Xbox megaserver is currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The European Xbox megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European Xbox megaserver is currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The ESO store and account system are currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The ESO store and account system are currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The ESO store and account system are currently available.)', function() {
-        const initialData = "The ESO store and account system are currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The European megaservers are currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European megaservers are currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The European megaservers are currently available.)', function() {
-        const initialData = "The European megaservers are currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The North American megaservers are currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American megaservers are currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The North American megaservers are currently available.)', function() {
-        const initialData = "The North American megaservers are currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The ESO Website is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The ESO Website is currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The ESO Website is currently online.)', function() {
-        const initialData = "The ESO Website is currently online.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The PTS is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The PTS is currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The PTS is currently available.)', function() {
-        const initialData = "The PTS is currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The European PC/Mac megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The European PC/Mac megaserver is currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The European PC/Mac megaserver is currently available.)', function() {
-        const initialData = "The European PC/Mac megaserver is currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (We are currently investigating issues some players are having logging into the European PC/Mac megaserver.)', function() {
-        const initialData = "We are currently investigating issues some players are having logging into the European PC/Mac megaserver.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('issues');
-    });
-
-    it('check format - (The issues related to logging in to the European PC/Mac megaserver have been resolved at this time.)', function() {
-        const initialData = "The issues related to logging in to the European PC/Mac megaserver have been resolved at this time.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The North American PC/Mac megaserver is currently unavailable while we perform maintenance.)', function() {
-        const initialData = "The North American PC/Mac megaserver is currently unavailable while we perform maintenance.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('down');
-    });
-
-    it('check format - (The North American PC/Mac megaserver is currently available.)', function() {
-        const initialData = "The North American PC/Mac megaserver is currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (Xbox Live™ is currently experiencing a service interruption.)', function() {
-        const initialData = "Xbox Live™ is currently experiencing a service interruption.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('issues');
-    });
-
-    it('check format - (The Xbox Live™ service interruption has been resolved.)', function() {
-        const initialData = "The Xbox Live™ service interruption has been resolved.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.)', function() {
-        const initialData = "We are currently investigating issues some players are having logging into the North American and European PC/Mac megaservers.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('issues');
-    });
-
-    it('check format - (We are currently investigating issues some players are having logging into the megaservers.)', function() {
-        const initialData = "We are currently investigating issues some players are having logging into the megaservers.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('issues');
-    });
-
-    it('check format - (The issues related to logging in to the megaservers have been resolved at this time.)', function() {
-        const initialData = "The issues related to logging in to the megaservers have been resolved at this time.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (We are currently investigating issues some players are having on the North American PC/Mac megaserver.)', function() {
-        const initialData = "We are currently investigating issues some players are having on the North American PC/Mac megaserver.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('issues');
-    });
-
-    it('check format - (The European Xbox megaserver is currently available.)', function() {
-        const initialData = "The European Xbox megaserver is currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
-    });
-
-    it('check format - (The North American Xbox megaserver is currently available.)', function() {
-        const initialData = "The North American Xbox megaserver is currently available.";
-
-        const status = EsoStatus.getInformationLineServerStatus(initialData);
-
-        expect(status).toEqual('up');
+    raw_exemples.forEach((exemple: any): void => {
+        it(`check format (${exemple.index}) - (${exemple.rawStatus})`, function() {
+            const status = EsoStatus.getInformationLineServerStatus(exemple.rawStatus);
+
+            expect(status).toEqual(exemple.status);
+        });
     });
 });
 
 describe('getInformationLineServerZone', function () {
-    it('check format - (pc_eu)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('pc_eu');
+    slug_zone_support_exemples.forEach((exemple: any): void => {
+        it(`check format - (${exemple.slug})`, function() {
+            const zone = EsoStatus.getInformationLineServerZone(exemple.slug);
 
-        expect(zone).toEqual('eu');
-    });
-
-    it('check format - (pc_na)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('pc_na');
-
-        expect(zone).toEqual('na');
-    });
-
-    it('check format - (ps_eu)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('ps_eu');
-
-        expect(zone).toEqual('eu');
-    });
-
-    it('check format - (ps_na)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('ps_na');
-
-        expect(zone).toEqual('na');
-    });
-
-    it('check format - (xbox_eu)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('xbox_eu');
-
-        expect(zone).toEqual('eu');
-    });
-
-    it('check format - (xbox_na)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('xbox_na');
-
-        expect(zone).toEqual('na');
-    });
-
-    it('check format - (site_web)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('site_web');
-
-        expect(zone).toEqual('none');
-    });
-
-    it('check format - (pts)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('pts');
-
-        expect(zone).toEqual('none');
-    });
-
-    it('check format - (web_forum)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('web_forum');
-
-        expect(zone).toEqual('none');
-    });
-
-    it('check format - (crown_store)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('crown_store');
-
-        expect(zone).toEqual('none');
-    });
-
-    it('check format - (eso_store)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('eso_store');
-
-        expect(zone).toEqual('none');
-    });
-
-    it('check format - (account_system)', function() {
-        const zone = EsoStatus.getInformationLineServerZone('account_system');
-
-        expect(zone).toEqual('none');
+            expect(zone).toEqual(exemple.zone);
+        });
     });
 });
 
 describe('getInformationLineServerSupport', function () {
-    it('check format - (pc_eu)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('pc_eu');
+    slug_zone_support_exemples.forEach((exemple: any): void => {
+        it(`check format - (${exemple.slug})`, function() {
+            const support = EsoStatus.getInformationLineServerSupport(exemple.slug);
 
-        expect(support).toEqual('pc');
-    });
-
-    it('check format - (pc_na)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('pc_na');
-
-        expect(support).toEqual('pc');
-    });
-
-    it('check format - (ps_eu)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('ps_eu');
-
-        expect(support).toEqual('ps');
-    });
-
-    it('check format - (ps_na)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('ps_na');
-
-        expect(support).toEqual('ps');
-    });
-
-    it('check format - (xbox_eu)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('xbox_eu');
-
-        expect(support).toEqual('xbox');
-    });
-
-    it('check format - (xbox_na)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('xbox_na');
-
-        expect(support).toEqual('xbox');
-    });
-
-    it('check format - (site_web)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('site_web');
-
-        expect(support).toEqual('none');
-    });
-
-    it('check format - (pts)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('pts');
-
-        expect(support).toEqual('none');
-    });
-
-    it('check format - (web_forum)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('web_forum');
-
-        expect(support).toEqual('none');
-    });
-
-    it('check format - (crown_store)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('crown_store');
-
-        expect(support).toEqual('none');
-    });
-
-    it('check format - (eso_store)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('eso_store');
-
-        expect(support).toEqual('none');
-    });
-
-    it('check format - (account_system)', function() {
-        const support = EsoStatus.getInformationLineServerSupport('account_system');
-
-        expect(support).toEqual('none');
+            expect(support).toEqual(exemple.support);
+        });
     });
 });
 
