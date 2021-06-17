@@ -13,7 +13,10 @@
   },
   "files": [
     "lib/index.js",
-    "lib/index.d.ts"
+    "lib/index.d.ts",
+    ".npmrc",
+    "CHANGELOG.md",
+    "README.md"
   ],
   "repository": {
     "type": "git",
