@@ -1,3 +1,14 @@
+## [1.2.3](https://github.com/dov118/eso-status/compare/1.2.2...1.2.3) (2021-06-17)
+
+### Code Refactoring
+* Update **CHANGELOG.md** ([bed366c](https://github.com/dov118/eso-status/commit/bed366c2324c15c7f9e6bac18b02a1a63bd78fc8))
+* Update **README.md** ([d42ce4e](https://github.com/dov118/eso-status/commit/d42ce4eebb36654f641e5fe2c68f51a3ff957d67))
+* Optimization of the test file **index.spec.ts** ([58ee50a](https://github.com/dov118/eso-status/commit/58ee50a3aa0dc83f7af88e0ecc05cff5dc7270fa))
+* Update **engines.npm** on **package.json** ([f6748fa](https://github.com/dov118/eso-status/commit/f6748faeb2140a1e5ae841aa9ef402125a8e8fc4))
+
+### Updates
+* Update **typescript** from **4.3.2** to **4.3.3** ([3b3393a](https://github.com/dov118/eso-status/commit/3b3393a46893d04ed4aa28e8430071707f490a5d))
+
 ## [1.2.2](https://github.com/dov118/eso-status/compare/1.2.1...1.2.2) (2021-06-11)
 
 ### Code Refactoring
