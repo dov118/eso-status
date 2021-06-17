@@ -1,3 +1,8 @@
+## [1.2.4](https://github.com/dov118/eso-status/compare/1.2.3...1.2.4) (2021-06-17)
+
+### Code Refactoring
+* Update **files** on **package.json** ([8745f95](https://github.com/dov118/eso-status/commit/8745f95707aa90c4bc2abaae16cc8d1b6e8532ba))
+
 ## [1.2.3](https://github.com/dov118/eso-status/compare/1.2.2...1.2.3) (2021-06-17)
 
 ### Code Refactoring
