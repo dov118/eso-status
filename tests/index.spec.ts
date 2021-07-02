@@ -213,6 +213,18 @@ const raw_exemples = [
         slugs: ['xbox_na'],
         status: 'up',
     },
+    {
+        index: 36,
+        rawStatus: "We are currently investigating issues some players are having logging into the North American megaservers.",
+        slugs: ['pc_na', 'xbox_na', 'ps_na'],
+        status: 'issues',
+    },
+    {
+        index: 37,
+        rawStatus: "The issues related to logging in to the North American megaservers have been resolved at this time.",
+        slugs: ['pc_na', 'xbox_na', 'ps_na'],
+        status: 'up',
+    },
 ]
 
 const slug_zone_support_exemples = [
