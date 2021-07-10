@@ -129,7 +129,6 @@ export class EsoStatus {
      * @return DateLine Line of block with date information
      */
     public static getBlocksDate(dateLine: DateLine | undefined): DateLine | undefined {
-        //console.log(dateLine);
         if (dateLine) {
             // @ts-ignore
             const year: string = /([0-9]{4})/.exec(dateLine.raw)[1] ?? '';
@@ -179,8 +178,6 @@ export class EsoStatus {
      * @return ServerSlug[] list of slug of the line
      */
     public static getInformationLineServerSlug(raw: string): ServerSlug[] {
-
-        // console.log(raw);
         const slugs: ServerSlug[] = [];
 
         if (raw.includes('Xbox megaserver')) {
