@@ -9,8 +9,7 @@
     "build": "tsc"
   },
   "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=5.0.0"
+    "node": ">=10.x || >=12.x"
   },
   "files": [
     "lib/index.js",
