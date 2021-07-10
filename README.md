@@ -4,8 +4,8 @@
 <img src="https://img.shields.io/npm/dt/@dov118/eso-status" alt="Downloads" />
 [![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/dov118/eso-status)](https://lgtm.com/projects/g/dov118/eso-status/context:javascript)
 <img src="https://img.shields.io/node/v/@dov118/eso-status" alt="Node version" />
-[![Build Status](https://github.com/dov118/eso-status/workflows/CI/badge.svg)](https://github.com/dov118/eso-status/actions)
-[![Build Status](https://github.com/dov118/eso-status/workflows/CI-CD/badge.svg)](https://github.com/dov118/eso-status/actions)
+[![Build Status](https://github.com/dov118/eso-status/workflows/CI/badge.svg)](https://github.com/dov118/eso-status/actions/workflows/CI.yaml)
+[![Delivery Status](https://github.com/dov118/eso-status/workflows/CI-CD/badge.svg)](https://github.com/dov118/eso-status/actions/workflows/CI-CD.yaml)
 
 Eso-status is a library for getting and formatting data can founded in [https://help.elderscrollsonline.com/app/answers/detail/a_id/4320](https://help.elderscrollsonline.com/app/answers/detail/a_id/4320)
 
