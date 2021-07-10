@@ -1,3 +1,20 @@
+## [1.2.5](https://github.com/dov118/eso-status/compare/1.2.4...1.2.5) (2021-07-10)
+
+### Features
+* Add **We are currently investigating issues some players are having logging into the North American megaservers.** status ([03a51b2](https://github.com/dov118/eso-status/commit/03a51b2c13c617499377d7bcb34ba70705f1ad94))
+* Add **The issues related to logging in to the North American megaservers have been resolved at this time.** status ([03a51b2](https://github.com/dov118/eso-status/commit/03a51b2c13c617499377d7bcb34ba70705f1ad94))
+* Add **Add linter** ([0df875d](https://github.com/dov118/eso-status/commit/0df875d06db8f441b865c19b9052d83c353597c9))
+* Add **gitHub Action CI and CI/CD** ([161ab94](https://github.com/dov118/eso-status/commit/161ab94860c7b111a1a195ddfcd6b0454e42ff76))
+
+### Code Refactoring
+* Update **engines.npm** on **package.json** [#1](https://github.com/dov118/eso-status/issues/1) ([5e670c8](https://github.com/dov118/eso-status/commit/5e670c861befdddb1bb955ddf77ebb1700898d61)) ([ac57ed4](https://github.com/dov118/eso-status/commit/ac57ed47687aa1d6011904d7edd2e64a4a9b84ca))
+* Remove unused comment ([30155c3](https://github.com/dov118/eso-status/commit/30155c3d20581bc64d0c382edd16e1b8485e860d))
+
+### Updates
+* Update **typescript** from **4.3.3** to **4.3.5** ([77ed22b](https://github.com/dov118/eso-status/commit/77ed22baf73847f8986f6c5a953db89860c2861e)) ([95ed78c](https://github.com/dov118/eso-status/commit/95ed78c0aff19099f93805480c8e077d3207500b))
+* Update **jest** from **27.0.4** to **27.0.6** ([e6c7cc6](https://github.com/dov118/eso-status/commit/e6c7cc6ba9153d4813afb37147f8247e0e6f1393)) ([5e278c8](https://github.com/dov118/eso-status/commit/5e278c8e5e8391239d48e2ce01faf8669be573b6))
+* Update **@types/jest** from **26.0.23** to **26.0.24** ([ed15067](https://github.com/dov118/eso-status/commit/ed150675f0bec899d91676c46f0aaca7737d1467))
+
 ## [1.2.4](https://github.com/dov118/eso-status/compare/1.2.3...1.2.4) (2021-06-17)
 
 ### Code Refactoring
