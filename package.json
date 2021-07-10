@@ -4,6 +4,7 @@
   "description": "Library used to get servers status of The elders scrolls Online game",
   "main": "lib/index.js",
   "scripts": {
+    "lint": "eslint lib/index.js",
     "test": "jest",
     "build": "tsc"
   },
@@ -30,6 +31,7 @@
   "homepage": "https://github.com/dov118/eso-status#readme",
   "devDependencies": {
     "@types/jest": "^26.0.24",
+    "eslint": "^7.30.0",
     "jest": "^27.0.6",
     "ts-jest": "^27.0.3",
     "typescript": "^4.3.5"
