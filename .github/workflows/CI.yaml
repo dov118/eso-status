@@ -8,11 +8,12 @@ name: CI
 on:
   push:
     branches:
-      - "dev"
+      - "*"
 
 jobs:
   test:
     name: Node ${{ matrix.node }} on ${{ matrix.os }}
+    if: github.event_name != 'pull_request'
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
     strategy:
