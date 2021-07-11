@@ -3,10 +3,11 @@
 # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions
 # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/contexts-and-expression-syntax-for-github-actions
 
-name: CI-CD
+name: CD
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - "master"
 
@@ -14,55 +15,22 @@ on:
     - cron: "0 0 1 * *"  # Every day at 1am
 
 jobs:
-  test:
-    name: Node ${{ matrix.node }} on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+  deploy:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
       fail-fast: true
       matrix:
         os:
           - ubuntu-latest
-          - macos-latest
-          - windows-latest
         node:
-          - 10.x
-          - 12.x
           - 14.x
-          - 15.x
-          - 16.x
     steps:
       - name: Checkout source
         uses: actions/checkout@v2
 
       - name: Install Node ${{ matrix.node }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the code
-        run: npm run build
-
-      - name: Run linters
-        run: npm run lint
-
-      - name: Run tests
-        run: npm run test
-
-  deploy:
-    name: Publish to NPM
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    needs: test
-
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v2
-
-      - name: Install Node
         uses: actions/setup-node@v1
 
       - name: Install dependencies
