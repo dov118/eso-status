@@ -11,8 +11,8 @@ on:
     branches:
       - "master"
 
-  schedule:
-    - cron: "0 0 1 * *"  # Every day at 1am
+#  schedule:
+#    - cron: "0 0 1 * *"  # Every day at 1am
 
 jobs:
   deploy:
