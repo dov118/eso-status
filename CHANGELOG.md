@@ -1,4 +1,11 @@
-## [1.2.5](https://github.com/dov118/eso-status/compare/1.2.4...1.2.5) (2021-07-10)
+## [1.2.6](https://github.com/dov118/eso-status/compare/5874d23...1.2.6) (2021-07-12)
+
+### Code Refactoring
+* Update **README.md** ([7ed89c5](https://github.com/dov118/eso-status/commit/7ed89c5a193de0b25b0b6cdfe2866d6acc198dda)) ([b4a7bba](https://github.com/dov118/eso-status/commit/b4a7bba4dae7eb5ebdec8450de092a6598de6e3b))
+* Update **CD** and **CI** actions ([efcac1f](https://github.com/dov118/eso-status/commit/efcac1f8205dfa9c29b9bc9040e031cbf24d59b5)) ([6bdb356](https://github.com/dov118/eso-status/commit/6bdb356d814034bc52fe29978746529a0afa6e26))
+* Update **CHANGELOG.md** ([99a5593](https://github.com/dov118/eso-status/commit/99a5593d4356cbbf815ae6f271455935d2ee2354))
+
+## [1.2.5](https://github.com/dov118/eso-status/compare/686ab73...5874d23) (2021-07-10)
 
 ### Features
 * Add **We are currently investigating issues some players are having logging into the North American megaservers.** status ([03a51b2](https://github.com/dov118/eso-status/commit/03a51b2c13c617499377d7bcb34ba70705f1ad94))
