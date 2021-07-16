@@ -150,7 +150,7 @@ export interface EsoServer {
  * Class used to get EsoStatus data
  */
 export class EsoStatus {
-  /***
+  /**
      * Methode used to get raw content of the website
      *
      * @return Promise<string> Raw content of the website
@@ -174,7 +174,7 @@ export class EsoStatus {
     });
   }
 
-  /***
+  /**
      * Methode used to get raw list content
      *
      * @param rawContent string Raw content of the website
