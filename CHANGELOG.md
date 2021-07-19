@@ -1,4 +1,15 @@
-## [1.2.6](https://github.com/dov118/eso-status/compare/5874d23...1.2.6) (2021-07-12)
+## [1.2.7](https://github.com/dov118/eso-status/compare/dd011e6...1.2.7) (2021-07-19)
+
+### Code Refactoring
+* Update **CI/CD** actions ([c04ccbf](https://github.com/dov118/eso-status/commit/c04ccbfc60eabb8bcc3da1c282c486149e8eefc0)) ([cb5b071](https://github.com/dov118/eso-status/commit/cb5b071687bedbd9cdaba0deec8131c7a1967613))
+* Add **package-lock.json** ([b60ffe2](https://github.com/dov118/eso-status/commit/b60ffe271a64bccc71a0b0934a76fac4c0310a29))
+* Code refactoring ([45e1476](https://github.com/dov118/eso-status/commit/45e1476233d649d4dbc9cb56cfb6c28ca74ebbde)) ([af1e4f1](https://github.com/dov118/eso-status/commit/af1e4f1a91487b3cb943d71c1bddf37f0f1b5f09))
+
+### Features
+* Update **Linter** ([02f3ed7](https://github.com/dov118/eso-status/commit/02f3ed7a1a78db7af40583e5441f6b0a1423a1eb)) ([205620c](https://github.com/dov118/eso-status/commit/205620c00d0dbcf150e7b650f83b194f64b503f3)) ([dc1beac](https://github.com/dov118/eso-status/commit/dc1beac8eb9993df3ccb1a4d7da22cada5533090))
+* Update **node engines** requirement ([f12838a](https://github.com/dov118/eso-status/commit/f12838a6fc31fc55c40e932bb0838842668445da))
+
+## [1.2.6](https://github.com/dov118/eso-status/compare/5874d23...dd011e6) (2021-07-12)
 
 ### Code Refactoring
 * Update **README.md** ([7ed89c5](https://github.com/dov118/eso-status/commit/7ed89c5a193de0b25b0b6cdfe2866d6acc198dda)) ([b4a7bba](https://github.com/dov118/eso-status/commit/b4a7bba4dae7eb5ebdec8450de092a6598de6e3b))
