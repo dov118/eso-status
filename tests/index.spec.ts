@@ -225,6 +225,12 @@ const rawExemples = [
     slugs: ['pc_na', 'xbox_na', 'ps_na'],
     status: 'up',
   },
+  {
+    index: 37,
+    rawStatus: 'We are currently investigating issues some players are having on the European PC/Mac megaserver.',
+    slugs: ['pc_eu'],
+    status: 'issues',
+  },
 ];
 
 const slugZoneSupportExemples = [
