@@ -249,101 +249,83 @@ const slugZoneSupportExemples = [
 ];
 
 describe('getWebSiteContent()', () => {
-  it('check format', () => {
-    EsoStatus.getWebSiteContent(url).then((data: any) => {
-      expect(typeof data).toEqual('string');
-    });
-  });
+  test('check format', () => EsoStatus.getWebSiteContent(url).then((data: any) => {
+    expect(typeof data).toEqual('string');
+  }));
 
-  it('check content', () => {
-    EsoStatus.getWebSiteContent(url).then((data: any) => {
-      expect(data).toContain('<!-- ENTER ESO SERVICE ALERTS BELOW THIS LINE -->');
-    });
-  });
+  test('check content', () => EsoStatus.getWebSiteContent(url).then((data: any) => {
+    expect(data).toContain('<!-- ENTER ESO SERVICE ALERTS BELOW THIS LINE -->');
+  }));
 });
 
 describe('getRawListContent()', () => {
-  it('check format', () => {
-    EsoStatus.getWebSiteContent(url).then((data: any) => {
-      const result = EsoStatus.getRawListContent(data);
+  test('check format', () => EsoStatus.getWebSiteContent(url).then((data: any) => {
+    const result = EsoStatus.getRawListContent(data);
 
-      expect(typeof result).toEqual('string');
-    });
-  });
+    expect(typeof result).toEqual('string');
+  }));
 
-  it('check content', () => {
-    EsoStatus.getWebSiteContent(url).then((data: any) => {
-      const result = EsoStatus.getRawListContent(data);
+  test('check content', () => EsoStatus.getWebSiteContent(url).then((data: any) => {
+    const result = EsoStatus.getRawListContent(data);
 
-      expect(result).toContain('<div><!-- ENTER ESO SERVICE ALERTS BELOW THIS LINE -->');
-    });
-  });
+    expect(result).toContain('<div><!-- ENTER ESO SERVICE ALERTS BELOW THIS LINE -->');
+  }));
 });
 
 describe('getRawContentItemList()', () => {
-  it('check format', () => {
-    EsoStatus.getWebSiteContent(url).then((data: any) => {
-      const rawListContent = EsoStatus.getRawListContent(data);
+  test('check format', () => EsoStatus.getWebSiteContent(url).then((data: any) => {
+    const rawListContent = EsoStatus.getRawListContent(data);
 
-      const result1 = EsoStatus.getRawContentItemList(rawListContent);
+    const result1 = EsoStatus.getRawContentItemList(rawListContent);
 
-      expect(typeof result1).toEqual('object');
-    });
-  });
+    expect(typeof result1).toEqual('object');
+  }));
 });
 
 describe('getRawContentItemLines()', () => {
-  it('check format', () => {
-    EsoStatus.getWebSiteContent(url).then((data: any) => {
-      const rawListContent = EsoStatus.getRawListContent(data);
+  test('check format', () => EsoStatus.getWebSiteContent(url).then((data: any) => {
+    const rawListContent = EsoStatus.getRawListContent(data);
 
-      let informationBlocks = EsoStatus.getRawContentItemList(rawListContent);
+    let informationBlocks = EsoStatus.getRawContentItemList(rawListContent);
 
-      informationBlocks = EsoStatus.getRawContentItemLines(informationBlocks);
+    informationBlocks = EsoStatus.getRawContentItemLines(informationBlocks);
 
-      expect(typeof informationBlocks).toEqual('object');
-    });
-  });
+    expect(typeof informationBlocks).toEqual('object');
+  }));
 });
 
 describe('getBlocks()', () => {
-  it('check format', () => {
-    EsoStatus.getWebSiteContent(url).then((data: any) => {
-      const rawListContent = EsoStatus.getRawListContent(data);
+  test('check format', () => EsoStatus.getWebSiteContent(url).then((data: any) => {
+    const rawListContent = EsoStatus.getRawListContent(data);
 
-      const informationBlocks = EsoStatus.getBlocks(rawListContent);
+    const informationBlocks = EsoStatus.getBlocks(rawListContent);
 
-      expect(typeof informationBlocks).toEqual('object');
-    });
-  });
+    expect(typeof informationBlocks).toEqual('object');
+  }));
 });
 
 describe('getBlocks()', () => {
-  it('check format', () => {
-    EsoStatus.getWebSiteContent(url).then((data: any) => {
-      const rawListContent = EsoStatus.getRawListContent(data);
+  test('check format', () => EsoStatus.getWebSiteContent(url).then((data: any) => {
+    const rawListContent = EsoStatus.getRawListContent(data);
 
-      const informationBlocks = EsoStatus.getBlocks(rawListContent);
+    const informationBlocks = EsoStatus.getBlocks(rawListContent);
 
-      expect(typeof informationBlocks).toEqual('object');
-    });
-  });
+    expect(typeof informationBlocks).toEqual('object');
+  }));
 });
 
 describe('getBlocksData()', () => {
-  it('check format', () => {
-    EsoStatus.getWebSiteContent(url).then((data: any) => {
-      const rawListContent = EsoStatus.getRawListContent(data);
+  test('check format', () => EsoStatus.getWebSiteContent(url).then((data: any) => {
+    const rawListContent = EsoStatus.getRawListContent(data);
 
-      let informationBlocks = EsoStatus.getRawContentItemList(rawListContent);
+    let informationBlocks = EsoStatus.getRawContentItemList(rawListContent);
 
-      informationBlocks = EsoStatus.getRawContentItemLines(informationBlocks);
+    informationBlocks = EsoStatus.getRawContentItemLines(informationBlocks);
 
-      informationBlocks = EsoStatus.getBlocksData(informationBlocks);
+    informationBlocks = EsoStatus.getBlocksData(informationBlocks);
 
-      expect(typeof informationBlocks).toEqual('object');
-    });
-  });
+    expect(typeof informationBlocks).toEqual('object');
+  }));
 });
 
 describe('getBlocksDate()', () => {
@@ -485,45 +467,41 @@ describe('getInformationLineServerSupport', () => {
 });
 
 describe('getLastForEachServer()', () => {
-  it('check format', () => {
-    EsoStatus.getWebSiteContent(url).then((data) => {
-      // Get raw list content
-      const rawListContent = EsoStatus.getRawListContent(data);
+  test('check format', () => EsoStatus.getWebSiteContent(url).then((data) => {
+    // Get raw list content
+    const rawListContent = EsoStatus.getRawListContent(data);
 
-      // Get all information blocks from raw list content of the website
-      let informationBlocks = EsoStatus.getBlocks(rawListContent);
+    // Get all information blocks from raw list content of the website
+    let informationBlocks = EsoStatus.getBlocks(rawListContent);
 
-      // Get all information blocks from raw list content of the website
-      informationBlocks = EsoStatus.getRawContentItemLines(informationBlocks);
+    // Get all information blocks from raw list content of the website
+    informationBlocks = EsoStatus.getRawContentItemLines(informationBlocks);
 
-      // Get data of each blocks
-      informationBlocks = EsoStatus.getBlocksData(informationBlocks);
+    // Get data of each blocks
+    informationBlocks = EsoStatus.getBlocksData(informationBlocks);
 
-      const result = EsoStatus.getLastForEachServer(informationBlocks);
+    const result = EsoStatus.getLastForEachServer(informationBlocks);
 
-      expect(typeof result).toEqual('object');
-    });
-  });
+    expect(typeof result).toEqual('object');
+  }));
 });
 
 describe('getEsoStatus()', () => {
-  it('check format', () => {
-    EsoStatus.getWebSiteContent(url).then((data) => {
-      // Get raw list content
-      const rawListContent = EsoStatus.getRawListContent(data);
+  test('check format', () => EsoStatus.getWebSiteContent(url).then((data) => {
+    // Get raw list content
+    const rawListContent = EsoStatus.getRawListContent(data);
 
-      // Get all information blocks from raw list content of the website
-      let informationBlocks = EsoStatus.getBlocks(rawListContent);
+    // Get all information blocks from raw list content of the website
+    let informationBlocks = EsoStatus.getBlocks(rawListContent);
 
-      // Get all information blocks from raw list content of the website
-      informationBlocks = EsoStatus.getRawContentItemLines(informationBlocks);
+    // Get all information blocks from raw list content of the website
+    informationBlocks = EsoStatus.getRawContentItemLines(informationBlocks);
 
-      // Get data of each blocks
-      informationBlocks = EsoStatus.getBlocksData(informationBlocks);
+    // Get data of each blocks
+    informationBlocks = EsoStatus.getBlocksData(informationBlocks);
 
-      const result = EsoStatus.getLastForEachServer(informationBlocks);
+    const result = EsoStatus.getLastForEachServer(informationBlocks);
 
-      expect(typeof result).toEqual('object');
-    });
-  });
+    expect(typeof result).toEqual('object');
+  }));
 });
