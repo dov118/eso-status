@@ -342,10 +342,12 @@ export class EsoStatus {
       }
     }
     if (raw.includes('PlayStation® megaserver')) {
-      if (raw.includes('North American')) {
-        slugs.push('ps_na');
-      } else if (raw.includes('European')) {
-        slugs.push('ps_eu');
+      if (raw.includes('North American') || raw.includes('European')) {
+        if (raw.includes('North American')) {
+          slugs.push('ps_na');
+        } if (raw.includes('European')) {
+          slugs.push('ps_eu');
+        }
       } else {
         slugs.push('ps_na');
         slugs.push('ps_eu');
@@ -389,7 +391,7 @@ export class EsoStatus {
     if (raw.includes('account system')) {
       slugs.push('account_system');
     }
-    if (raw.includes('PlayStation® Network')) {
+    if (raw.includes('PlayStation™ Network')) {
       slugs.push('ps_na');
       slugs.push('ps_eu');
     }

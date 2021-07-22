@@ -47,13 +47,13 @@ const rawExemples = [
   },
   {
     index: 8,
-    rawStatus: 'The PlayStation® Network is currently experiencing a service interruption.',
+    rawStatus: 'The PlayStation™ Network is currently experiencing a service interruption.',
     slugs: ['ps_na', 'ps_eu'],
     status: 'issues',
   },
   {
     index: 9,
-    rawStatus: 'The PlayStation® Network service interruption has been resolved.',
+    rawStatus: 'The PlayStation™ Network service interruption has been resolved.',
     slugs: ['ps_na', 'ps_eu'],
     status: 'up',
   },
@@ -230,6 +230,18 @@ const rawExemples = [
     rawStatus: 'We are currently investigating issues some players are having on the European PC/Mac megaserver.',
     slugs: ['pc_eu'],
     status: 'issues',
+  },
+  {
+    index: 39,
+    rawStatus: 'We are currently investigating issues some players are having logging into the North American and European PlayStation® megaservers.',
+    slugs: ['ps_na', 'ps_eu'],
+    status: 'issues',
+  },
+  {
+    index: 40,
+    rawStatus: 'The issues related to logging in to the North American and European PlayStation® megaservers have been resolved at this time.',
+    slugs: ['ps_na', 'ps_eu'],
+    status: 'up',
   },
 ];
 
