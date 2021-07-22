@@ -1,4 +1,22 @@
-## [1.2.7](https://github.com/dov118/eso-status/compare/dd011e6...1.2.7) (2021-07-19)
+## [1.2.8](https://github.com/dov118/eso-status/compare/edf4729...1.2.8) (2021-07-22)
+
+### Code Refactoring
+* Refactor code for promise in unitary test ([a7a0f35](https://github.com/dov118/eso-status/commit/a7a0f35938fd9661a400e01069e8f5b2ab38d04a))
+* Refactoring pattern list ([389962a](https://github.com/dov118/eso-status/commit/389962aa77c518b2c08a1f44230c1f03152395bf))
+
+### Features
+* Add **We are currently investigating issues some players are having on the European PC/Mac megaserver.** status ([8bf3a2d](https://github.com/dov118/eso-status/commit/8bf3a2d45a1e7e39d2ad550be8e2438e9e64f904))
+* Add **We are currently investigating issues some players are having logging into the North American and European PlayStation® megaservers.** ([6b0b25d](https://github.com/dov118/eso-status/commit/6b0b25dc1c0b4ebf9da06d92d7cad7ef806792b8))
+* Add **The issues related to logging in to the North American and European PlayStation® megaservers have been resolved at this time.** ([6b0b25d](https://github.com/dov118/eso-status/commit/6b0b25dc1c0b4ebf9da06d92d7cad7ef806792b8))
+* Change **The PlayStation® Network is currently experiencing a service interruption.** to **The PlayStation™ Network is currently experiencing a service interruption.** ([6b0b25d](https://github.com/dov118/eso-status/commit/6b0b25dc1c0b4ebf9da06d92d7cad7ef806792b8))
+* Change **The PlayStation® Network service interruption has been resolved.** to **The PlayStation™ Network service interruption has been resolved.** ([6b0b25d](https://github.com/dov118/eso-status/commit/6b0b25dc1c0b4ebf9da06d92d7cad7ef806792b8))
+
+### Updates
+* Update **@typescript-eslint/eslint-plugin** from **4.28.3** to **4.28.4** ([d7566e5](https://github.com/dov118/eso-status/commit/d7566e50bf29b73fd41e776899a0fc2ecfce02e6))
+* Update **eslint-plugin-jest** from **24.3.6** to **24.4.0** ([b5b177f](https://github.com/dov118/eso-status/commit/b5b177f34e8b5843cf0bb77496cfecae06c7b8a0)) ([3574cf3](https://github.com/dov118/eso-status/commit/3574cf329f73c355012588b45135f62387aeec3c))
+* Update **ts-jest** from **27.0.3** to **27.0.4** ([2aa5e81](https://github.com/dov118/eso-status/commit/2aa5e81d9c2cd24ce6c300266bbfdb504a8855ea))
+
+## [1.2.7](https://github.com/dov118/eso-status/compare/dd011e6...edf4729) (2021-07-19)
 
 ### Code Refactoring
 * Update **CI/CD** actions ([c04ccbf](https://github.com/dov118/eso-status/commit/c04ccbfc60eabb8bcc3da1c282c486149e8eefc0)) ([cb5b071](https://github.com/dov118/eso-status/commit/cb5b071687bedbd9cdaba0deec8131c7a1967613))
