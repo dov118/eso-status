@@ -1,6 +1,6 @@
 # ESO-STATUS
 [![npm](https://img.shields.io/npm/v/@dov118/eso-status)](https://www.npmjs.com/package/@dov118/eso-status)
-[![license](https://img.shields.io/npm/l/@dov118/eso-status)](https://github.com/dov118/eso-status/blob/master/LICENSE)
+[![license](https://img.shields.io/npm/l/@dov118/eso-status)](https://github.com/dov118/eso-status/blob/master/LICENSE.md)
 <img src="https://img.shields.io/npm/dt/@dov118/eso-status" alt="Downloads" />
 [![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/dov118/eso-status)](https://lgtm.com/projects/g/dov118/eso-status/context:javascript)
 <img src="https://img.shields.io/node/v/@dov118/eso-status" alt="Node version" />
