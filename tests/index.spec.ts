@@ -226,7 +226,7 @@ const rawExemples = [
     status: 'up',
   },
   {
-    index: 37,
+    index: 38,
     rawStatus: 'We are currently investigating issues some players are having on the European PC/Mac megaserver.',
     slugs: ['pc_eu'],
     status: 'issues',
