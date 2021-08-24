@@ -16,8 +16,8 @@
     "lib/index.js",
     "lib/index.d.ts",
     ".npmrc",
-    "LICENSE.md",
     "CHANGELOG.md",
+    "LICENSE.md",
     "README.md"
   ],
   "repository": {
