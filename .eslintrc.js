@@ -2,11 +2,11 @@ module.exports = {
   env: {
     es2021: true,
     node: true,
-    'jest/globals': true
+    'jest/globals': true,
   },
   extends: [
     'airbnb-base',
-    'plugin:import/typescript'
+    'plugin:import/typescript',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -15,10 +15,10 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
-    'jest'
+    'jest',
   ],
   rules: {
     'max-len': 0,
-    'import/extensions': 0
+    'import/extensions': 0,
   },
 };

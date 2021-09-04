@@ -1,4 +1,27 @@
-## [1.2.8](https://github.com/dov118/eso-status/compare/edf4729...1.2.8) (2021-07-22)
+## [1.2.9](https://github.com/dov118/eso-status/compare/bde691f...1.2.9) (2021-09-04)
+
+### Features
+* Update CI action ([edf0ce6](https://github.com/dov118/eso-status/commit/edf0ce672f9772e0c3468be7840ebe69126a029c))
+
+### Code Refactoring
+* Rename **LICENCE** file ([71e1df4](https://github.com/dov118/eso-status/commit/71e1df4951660d528eb54bec95d19a9edaa74d8f))
+* Set **testTimeout** for jest run ([dc4c0f5](https://github.com/dov118/eso-status/commit/dc4c0f565c2944b728d4ee977b5f89cea64e6631))
+* Code review **eslint** config file ([147c1bb](https://github.com/dov118/eso-status/commit/147c1bbaaf409a93584f370dbabb5756c22cc215))
+* Update **package.json** ([6fb263a](https://github.com/dov118/eso-status/commit/6fb263a6a05081e5efbec5a694292f84350406c0))
+
+### Updates
+* Update **@typescript-eslint/eslint-plugin** from **4.28.4** to **4.29.3** ([23b67ac](https://github.com/dov118/eso-status/commit/23b67ac03ab975cbc234ec4da223ad98e93c0788)) ([20ee17e](https://github.com/dov118/eso-status/commit/20ee17e74dbb8ff9c57f900824b95215ebf36680)) ([46bc3b9](https://github.com/dov118/eso-status/commit/46bc3b9e1d11c47560fef3dd68f79d7d477ec85b)) ([36dd1c0](https://github.com/dov118/eso-status/commit/36dd1c03e7c559c1d36c97a8b22e2982692a43b9)) ([5e52810](https://github.com/dov118/eso-status/commit/5e52810bd52b777217b64cc991c8134026cb6ca8)) ([bcc21d1](https://github.com/dov118/eso-status/commit/bcc21d1779a024701010713704841b12588f6c27))
+* Update **@typescript-eslint/parser** from **4.28.4** to **4.29.3** ([23b67ac](https://github.com/dov118/eso-status/commit/23b67ac03ab975cbc234ec4da223ad98e93c0788)) ([a5aa58c](https://github.com/dov118/eso-status/commit/a5aa58ce9dcf422bfe7d51518d6499d765380509)) ([81e9a91](https://github.com/dov118/eso-status/commit/81e9a91234f0d00549eccb2103060fa1bec0ca22)) ([b8e523e](https://github.com/dov118/eso-status/commit/b8e523e3cdad05a7f394a567ac12bc2b03c79450)) ([8c939c5](https://github.com/dov118/eso-status/commit/8c939c56fd49d92f87ce86afd25252756519a609)) ([a55aa19](https://github.com/dov118/eso-status/commit/a55aa19a4203c9f69441485ce9b3b4131b8e1112))
+* Update **@typescript-eslint/typescript-estree** from **4.28.4** to **4.29.3** ([23b67ac](https://github.com/dov118/eso-status/commit/23b67ac03ab975cbc234ec4da223ad98e93c0788)) ([8ba9630](https://github.com/dov118/eso-status/commit/8ba9630878e1630ae1035cbd0145daa9a1a8566e)) ([0c0943c](https://github.com/dov118/eso-status/commit/0c0943c13208cc2cb8d90f37384a2ca0b34ba467)) ([b13c204](https://github.com/dov118/eso-status/commit/b13c2044b075d2bfd4d4b80654eb583ba9b8e5e0)) ([47d650d](https://github.com/dov118/eso-status/commit/47d650da1a2a87d91bd6276864c7ecaf1e925ed8)) ([bded621](https://github.com/dov118/eso-status/commit/bded6212ba95c3ba7ca510ba2c598fda9fb51a83))
+* Update **eslint** from **7.31.0** to **7.32.0** ([6306319](https://github.com/dov118/eso-status/commit/6306319e560ba71e70ce42de1e3cc03a84ad6097))
+* Update **eslint-plugin-import** from **2.23.4** to **2.24.0** ([8315ce1](https://github.com/dov118/eso-status/commit/8315ce14cd68c335c026ab51a6660fceb6fb1167)) ([833d006](https://github.com/dov118/eso-status/commit/833d006d9f625edabca4d08edf2ba47aab9bbe19)) ([fb5e195](https://github.com/dov118/eso-status/commit/fb5e19566bd81cda2172f47c599ee22026da4c86))
+* Update **@types/jest** from **26.0.24** to **27.0.1** ([c33293a](https://github.com/dov118/eso-status/commit/c33293a084df814301a3279ce9ddea9b07606d5c)) ([73609d3](https://github.com/dov118/eso-status/commit/73609d39f397c87bf91394a509f778a5deec0380)) ([6181d51](https://github.com/dov118/eso-status/commit/6181d51d072ceea1a14c7947ed946aa713cec623))
+* Update **ts-jest** from **27.0.4** to **27.0.5** ([93c462c](https://github.com/dov118/eso-status/commit/93c462c218e372641c593220d645a760e6259d53))
+* Update **jest** from **27.0.6** to **27.1.0** ([d894d47](https://github.com/dov118/eso-status/commit/d894d47ffce23b924f222a925ac1b17ebfafd767))
+* Update **typescript** from **4.3.5** to **4.4.2** ([c192880](https://github.com/dov118/eso-status/commit/c192880bb350f4d8da5a95a13ec488d6570a1578))
+* Update **package-lock.json** ([87e4d2f](https://github.com/dov118/eso-status/commit/87e4d2f9675069c147800dee14b74ef9774bff28)) ([fc57b98](https://github.com/dov118/eso-status/commit/fc57b98a61111ccc6ff4fcb3c9f32002d1b68036)) ([bf56192](https://github.com/dov118/eso-status/commit/bf56192c3d1b83b074e271c91bcb9f9f059e0c15)) ([55828b6](https://github.com/dov118/eso-status/commit/55828b62637f6b6cf590aa204c6b8bc2560ac464)) ([37e557b](https://github.com/dov118/eso-status/commit/37e557bda1100b57d16456d2e6555675ed81bd62)) ([4e240d6](https://github.com/dov118/eso-status/commit/4e240d60939474c15941f95fc60900a129bcc848)) ([243f6d5](https://github.com/dov118/eso-status/commit/243f6d5ae0b67926ced4c1e821a16234c179153d)) ([efc79ca](https://github.com/dov118/eso-status/commit/efc79cae4828c4a32f8e3d01eba6900fffd4c26c)) ([b37b831](https://github.com/dov118/eso-status/commit/b37b8316a5166ddf68b86f9c9d25ed2cce6a4cf8))
+
+## [1.2.8](https://github.com/dov118/eso-status/compare/edf4729...bde691f) (2021-07-22)
 
 ### Code Refactoring
 * Refactor code for promise in unitary test ([a7a0f35](https://github.com/dov118/eso-status/commit/a7a0f35938fd9661a400e01069e8f5b2ab38d04a))

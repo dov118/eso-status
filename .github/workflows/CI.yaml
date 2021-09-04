@@ -11,7 +11,7 @@ on:
       - "*"
 
   schedule:
-    - cron: "0 0 1 * *"  # Every day at 1am
+    - cron: "0 0 * * *"
 
 jobs:
   test:
