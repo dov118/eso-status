@@ -1,4 +1,15 @@
-## [1.2.9](https://github.com/dov118/eso-status/compare/bde691f...1.2.9) (2021-09-04)
+## [1.2.10](https://github.com/dov118/eso-status/compare/d84c96a...1.2.10) (2021-09-15)
+
+### Updates
+* Update **package-lock.json** ([5544695](https://github.com/dov118/eso-status/commit/5544695b6e0455dcabec235d2dc5a29abf30150f))
+* Update **@typescript-eslint/eslint-plugin** from **4.30.0** to **4.31.1** ([688a8c4](https://github.com/dov118/eso-status/commit/688a8c4923bb9b03d4afee0683f98fd9f2271a17))
+* Update **@typescript-eslint/parser** from **4.30.0** to **4.31.1** ([ecdf41f](https://github.com/dov118/eso-status/commit/ecdf41fa5e11abd827162b38803abb2ebf5be023))
+* Update **@typescript-eslint/typescript-estree** from **4.30.0** to **4.31.1** ([19c8361](https://github.com/dov118/eso-status/commit/19c8361686a90b40275b3569924f817154a54521))
+* Update **jest** from **27.1.0** to **27.2.0** ([e63b284](https://github.com/dov118/eso-status/commit/e63b2842d4756a68a5dfdfad74b98cfd62636caa))
+* Update **typescript** from **4.4.2** to **4.4.3** ([7094c17](https://github.com/dov118/eso-status/commit/7094c17f87a1ad79860cc3bf74593626f389eca0))
+* Update **axios** from **0.21.1** to **0.21.4** ([640c19f](https://github.com/dov118/eso-status/commit/640c19f14c28a531bddd93b86f17c8e5bdec5027))
+
+## [1.2.9](https://github.com/dov118/eso-status/compare/bde691f...d84c96a) (2021-09-04)
 
 ### Features
 * Update CI action ([edf0ce6](https://github.com/dov118/eso-status/commit/edf0ce672f9772e0c3468be7840ebe69126a029c))
