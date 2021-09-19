@@ -249,6 +249,12 @@ const rawExemples = [
     slugs: ['xbox_na'],
     status: 'issues',
   },
+  {
+    index: 42,
+    rawStatus: 'The connection issues for the North American Xbox megaserver have been resolved at this time.',
+    slugs: ['xbox_na'],
+    status: 'up',
+  },
 ];
 
 const slugZoneSupportExemples = [
