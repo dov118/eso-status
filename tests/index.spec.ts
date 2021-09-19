@@ -243,6 +243,12 @@ const rawExemples = [
     slugs: ['ps_na', 'ps_eu'],
     status: 'up',
   },
+  {
+    index: 41,
+    rawStatus: 'We are currently investigating connection issues some players are having on the North American Xbox megaserver.',
+    slugs: ['xbox_na'],
+    status: 'issues',
+  },
 ];
 
 const slugZoneSupportExemples = [
