@@ -261,6 +261,12 @@ const rawExemples = [
     slugs: ['pc_na', 'pc_eu'],
     status: 'issues',
   },
+  {
+    index: 44,
+    rawStatus: 'The issues related to Steam players logging in to the North American and European PC/Mac megaservers have been resolved at this time.',
+    slugs: ['pc_na', 'pc_eu'],
+    status: 'up',
+  },
 ];
 
 const slugZoneSupportExemples = [
