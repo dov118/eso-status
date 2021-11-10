@@ -31,10 +31,10 @@ jobs:
           - 12.x
           - 14.15.0
           - 14.x
-          - 15.0.0
-          - 15.x
           - 16.0.0
           - 16.x
+          - 17.0.0
+          - 17.x
     steps:
       - name: Checkout source
         uses: actions/checkout@v2
