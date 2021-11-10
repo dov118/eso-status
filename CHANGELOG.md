@@ -1,4 +1,28 @@
-## [1.2.10](https://github.com/dov118/eso-status/compare/d84c96a...1.2.10) (2021-09-15)
+## [1.2.11](https://github.com/dov118/eso-status/compare/594a273...1.2.11) (2021-11-11)
+
+### Updates
+* Update node version ([46bba90](https://github.com/dov118/eso-status/commit/46bba90087267e877a0e5d1777bf71599885f563)) ([71c013a](https://github.com/dov118/eso-status/commit/71c013ad5ecb35a3d541a27f45ddf20ef4a275d3)) ([e6fa75b](https://github.com/dov118/eso-status/commit/e6fa75baaa2a72c1797eafd455ff6e4ad56537be)) ([6e17d17](https://github.com/dov118/eso-status/commit/6e17d171f47888479606841611b9f06cbbea6660)) ([5ea6bae](https://github.com/dov118/eso-status/commit/5ea6bae484e8a46a279167113c63aec945d5d166))
+* Update **package-lock.json** ([2f3e515](https://github.com/dov118/eso-status/commit/2f3e5154c34fa92c0ef2308d873d58e76e02baeb)) ([195ba92](https://github.com/dov118/eso-status/commit/195ba92cd431e14060ed8d6bf27d6f9d72422ca6)) ([37d148c](https://github.com/dov118/eso-status/commit/37d148cd80e27ab1cf3e2bc9937d21e546c690a2))
+* Update **eslint-plugin-jest** from **24.4.0** to **25.2.4** ([cc94adc](https://github.com/dov118/eso-status/commit/cc94adc3a36783350534f25d0e9083f0b0752680)) ([de76086](https://github.com/dov118/eso-status/commit/de7608669d420b83161eaf1f2bf285585bd8a2ea)) ([5019ed3](https://github.com/dov118/eso-status/commit/5019ed33a21d7f18ac5c5c69e6d71925854c1aa2))
+* Update **@types/jest** from **27.0.1** to **27.0.2** ([323c262](https://github.com/dov118/eso-status/commit/323c26299fa937a9f181151026802782386b2aa2))
+* Update **@typescript-eslint/eslint-plugin** from **4.31.1** to **5.3.1** ([8bea201](https://github.com/dov118/eso-status/commit/8bea2019f855ec2b7fd16593629681bab5377be7)) ([2e4a9e0](https://github.com/dov118/eso-status/commit/2e4a9e04fc9bfb043b15dffc47e2a0d9358b69da))
+* Update **@typescript-eslint/parser** from **4.31.1** to **5.3.1** ([98507e9](https://github.com/dov118/eso-status/commit/98507e959f5639931d14a3da5b95c1973ef8c44d)) ([2e4a9e0](https://github.com/dov118/eso-status/commit/2e4a9e04fc9bfb043b15dffc47e2a0d9358b69da))
+* Update **@typescript-eslint/typescript-estree** from **4.31.1** to **5.3.1** ([976b37c](https://github.com/dov118/eso-status/commit/976b37cb656a865c391fb357d66aefaba530c09a)) ([a9573e4](https://github.com/dov118/eso-status/commit/a9573e4d2eb50e4a4e53ac12748d06c9e06c508a))
+* Update **jest** from **27.2.0** to **27.3.1** ([5ec54ad](https://github.com/dov118/eso-status/commit/5ec54adce74441d1f2159e73dfc7a274b656823b)) ([86f9cb4](https://github.com/dov118/eso-status/commit/86f9cb493470cd5f910a09de6d0e581181ea3320))
+* Update **axios** from **0.21.4** to **0.24.0** ([9225052](https://github.com/dov118/eso-status/commit/9225052e02c06c01ae92aee3c65c89e0b248141d)) ([3b65208](https://github.com/dov118/eso-status/commit/3b65208947ef92fa63b1910f4304c45216371f45))
+* Update **eslint** from **7.32.0** to **8.2.0** ([d6ca3a7](https://github.com/dov118/eso-status/commit/d6ca3a7ab3f01c02e2d3c671939008ec87780cd4))
+* Update **eslint-config-airbnb-base** from **14.2.1** to **15.0.0** ([d6ca3a7](https://github.com/dov118/eso-status/commit/d6ca3a7ab3f01c02e2d3c671939008ec87780cd4))
+* Update **eslint-plugin-import** from **2.24.2** to **2.25.3** ([d6ca3a7](https://github.com/dov118/eso-status/commit/d6ca3a7ab3f01c02e2d3c671939008ec87780cd4))
+* Update **ts-jest** from **27.0.5** to **27.0.7** ([996349b](https://github.com/dov118/eso-status/commit/996349bf1a5c12e4500870ac41581422d4453280))
+* Update **typescript** from **4.4.3** to **4.4.4** ([a8f9eca](https://github.com/dov118/eso-status/commit/a8f9ecab127ba84815713d6cad3bc070c733d1ad))
+
+### Features
+* Add **We are currently investigating connection issues some players are having on the North American Xbox megaserver.** status ([683c5c1](https://github.com/dov118/eso-status/commit/683c5c147d847caeee0be4950156347bef53bd5d))
+* Add **The connection issues for the North American Xbox megaserver have been resolved at this time.** status ([898c406](https://github.com/dov118/eso-status/commit/898c4064dacb93e71d1268dd0c1b9636c54685ba))
+* Add **We are currently investigating issues some Steam users are having logging into the North American and European PC/Mac megaservers.** status ([c1f6174](https://github.com/dov118/eso-status/commit/c1f61746ee863f93ed740d886b68ab5fca294e74))
+* Add **The issues related to Steam players logging in to the North American and European PC/Mac megaservers have been resolved at this time.** status ([2ba659e](https://github.com/dov118/eso-status/commit/2ba659e8dcc284a04a506c3cd56fdd398f84cdde))
+
+## [1.2.10](https://github.com/dov118/eso-status/compare/d84c96a...594a273) (2021-09-15)
 
 ### Updates
 * Update **package-lock.json** ([5544695](https://github.com/dov118/eso-status/commit/5544695b6e0455dcabec235d2dc5a29abf30150f))
