@@ -255,6 +255,12 @@ const rawExemples = [
     slugs: ['xbox_na'],
     status: 'up',
   },
+  {
+    index: 43,
+    rawStatus: 'We are currently investigating issues some Steam users are having logging into the North American and European PC/Mac megaservers.',
+    slugs: ['pc_na', 'pc_eu'],
+    status: 'issues',
+  },
 ];
 
 const slugZoneSupportExemples = [
